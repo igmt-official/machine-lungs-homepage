@@ -1,0 +1,116 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Khand:wght@400;600;700&display=swap");
+
+/* VARIABLE CSS */
+:root {
+  --header-height: 5.6rem;
+
+  /* COLOR */
+  --title-color: #0f141e;
+  --text-color: #0f141e;
+  --text-color-light: #878a8f;
+  --body-color: #ffffff;
+  --container-color: #ffffff;
+
+  /* FONT AND TYPOGRAPHY */
+  --bf: "Khand", sans-serif;
+  --df-s: 62.5%;
+  --h1-s: 5.4rem;
+  --h2-s: 3.2rem;
+  --h3-s: 2.4rem;
+  --nf-s: 1.9rem;
+  --sf-s: 1.6rem;
+  --xsf-s: 1.4rem;
+
+  /* FONT WEIGHT */
+  --fw-medium: 600;
+  --fw-bold: 700;
+
+  /* MARGIN */
+  --m-container-lr: 25vw;
+  --m-xb-s: 5.4rem;
+  --m-b-s: 4.8rem;
+  --m-m-s: 3.2rem;
+  --m-s-s: 2.4rem;
+  --m-xs-s: 1.6rem;
+
+  /* PADDING */
+  --p-section-tb: 5.4rem;
+  --p-section-lr: 10vw;
+  --p-xb-s: 5.4rem;
+  --p-b-s: 4.8rem;
+  --p-m-s: 3.2rem;
+  --p-s-s: 2.4rem;
+  --p-xs-s: 1.6rem;
+
+  /* Z-INDEX */
+  --z-fixed: 999;
+}
+
+/* BASE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--df-s);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--bf);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  /* margin: var(--header-height) 0 0 0; */
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--fw-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--bf);
+  font-size: var(--sf-s);
+}
+
+/* REUSABLE */
+.section {
+  padding: var(--p-section-tb) var(--p-section-lr);
+}
+
+.container {
+  margin: 0 var(--m-container-lr);
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
