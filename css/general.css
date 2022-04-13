@@ -27,7 +27,7 @@
   --fw-bold: 700;
 
   /* MARGIN */
-  --m-container-lr: 25vw;
+  --m-container-lr: 5vw;
   --m-xb-s: 5.4rem;
   --m-b-s: 4.8rem;
   --m-m-s: 3.2rem;
@@ -36,7 +36,7 @@
 
   /* PADDING */
   --p-section-tb: 5.4rem;
-  --p-section-lr: 10vw;
+  --p-section-lr: 5vw;
   --p-xb-s: 5.4rem;
   --p-b-s: 4.8rem;
   --p-m-s: 3.2rem;
@@ -104,6 +104,8 @@ button {
 }
 
 .container {
+  height: 500px;
+  max-width: 100%;
   margin: 0 var(--m-container-lr);
 }
 
