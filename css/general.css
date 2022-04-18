@@ -6,15 +6,11 @@
   --header-height: 5.6rem;
 
   /* COLOR */
-  --title-color: #0f141e;
-  --text-color: #0f141e;
+  --title-color: #212529;
+  --text-color: #212529;
   --text-color-light: #878a8f;
   --body-color: #ffffff;
-  --bg-gradient: linear-gradient(
-    90deg,
-    rgba(15, 20, 30, 1) 0%,
-    rgba(15, 20, 30, 1) 100%
-  );
+  --bg-gradient: #212529;
   --container-color: #ffffff;
 
   /* FONT AND TYPOGRAPHY */
@@ -78,13 +74,9 @@ body.dark-theme {
   --title-color: #ffffff;
   --text-color: #ffffff;
   --text-color-light: #878a8f;
-  --body-color: #0f141e;
-  --bg-gradient: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  --container-color: #0f141e;
+  --body-color: #212529;
+  --bg-gradient: #ffffff;
+  --container-color: #212529;
 
   background-color: var(--body-color);
 

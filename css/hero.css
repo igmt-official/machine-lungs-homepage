@@ -28,6 +28,7 @@
 }
 
 .header .hero-section .hero-container .text-box .description {
+  color: var(--text-color-light);
   font-size: var(--xsf-s);
   line-height: 1.6;
   margin-bottom: var(--m-s-s);
