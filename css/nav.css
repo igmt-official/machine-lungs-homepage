@@ -34,6 +34,11 @@
 
 .header .nav .nav-bar .nav-menu .icon {
   font-size: var(--sf-s);
+  transition: all 0.3s;
+}
+
+.header .nav .nav-bar .nav-menu .icon:hover {
+  color: var(--text-color-light);
 }
 
 .header .search-bar {
@@ -59,14 +64,37 @@
 }
 
 .main .nav-menu-grid {
+  grid-template-columns: 1fr;
+  row-gap: 1.6rem;
   align-items: center;
   left: 0;
-  bottom: 0;
-  position: absolute;
+  bottom: -100%;
+  position: fixed;
   min-width: 100vw;
-  min-height: 5rem;
-  padding: 0 var(--p-section-lr);
+  min-height: 6.4rem;
+  padding: 1.6rem var(--p-section-lr);
   background: var(--bg-gradient);
+  box-shadow: 0px -10px 40px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px -10px 40px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px -10px 40px 0px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.4s;
+}
+
+.main .nav-menu-grid .nav-close {
+  justify-self: end;
+  font-size: var(--sf-s);
+  color: var(--body-color);
+
+  transition: all 0.3s;
+}
+
+.main .nav-menu-grid .nav-close:hover {
+  color: var(--text-color-light);
+}
+
+.main .nav-menu-grid.show-menu {
+  bottom: 0;
 }
 
 .main .nav-menu-grid .nav-menu-grid-list {

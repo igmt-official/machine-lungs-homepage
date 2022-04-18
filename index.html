@@ -37,7 +37,7 @@
         <div class="nav-bar flex">
           <span class="logo">MACHINE LUNGS</span>
           <div class="nav-menu">
-            <i class="bx bx-grid-alt icon"></i>
+            <i id="nav-toggle" class="bx bx-grid-alt icon"></i>
             <i class="bx bx-moon icon"></i>
           </div>
         </div>
@@ -79,14 +79,15 @@
     <!-- MAIN -->
     <main class="main">
       <!-- NAV GRID -->
-      <div class="nav-menu-grid grid">
+      <div id="nav-menu" class="nav-menu-grid grid show-menu">
+        <i id="nav-close" class="bx bx-x nav-close"></i>
         <ul class="nav-menu-grid-list flex">
           <li>
-            <a href="#" class="nav-link"><i class="bx bx-star icon"></i> New</a>
+            <a href="#" class="nav-link"><i class="bx bx-star"></i>New</a>
           </li>
           <li>
             <a href="#" class="nav-link"
-              ><i class="bx bx-shopping-bag"></i> Shop</a
+              ><i class="bx bx-shopping-bag"></i>Shop</a
             >
           </li>
         </ul>
