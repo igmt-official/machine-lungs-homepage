@@ -10,6 +10,11 @@
   --text-color: #0f141e;
   --text-color-light: #878a8f;
   --body-color: #ffffff;
+  --bg-gradient: linear-gradient(
+    90deg,
+    rgba(15, 20, 30, 1) 0%,
+    rgba(39, 44, 53, 1) 100%
+  );
   --container-color: #ffffff;
 
   /* FONT AND TYPOGRAPHY */
@@ -35,7 +40,7 @@
   --m-xs-s: 1.6rem;
 
   /* PADDING */
-  --p-section-tb: 5.4rem;
+  --p-section-tb: 5.6rem;
   --p-section-lr: 5vw;
   --p-xb-s: 5.4rem;
   --p-b-s: 4.8rem;
@@ -78,6 +83,7 @@ ul {
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
 }
 
@@ -88,13 +94,13 @@ img {
 
 button,
 input {
+  font-family: var(--bf);
   border: none;
   outline: none;
 }
 
 button {
   cursor: pointer;
-  font-family: var(--bf);
   font-size: var(--sf-s);
 }
 
@@ -104,7 +110,6 @@ button {
 }
 
 .container {
-  height: 500px;
   max-width: 100%;
   margin: 0 var(--m-container-lr);
 }
