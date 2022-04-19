@@ -1,51 +1,62 @@
 /* GOOGLE FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Khand:wght@400;600;700&display=swap");
 
-/* VARIABLE CSS */
+
+/* DARK THEME */
+body.dark-theme {
+  /* COLOR */
+  --title-color: #181818;
+  --text-color: #151515;
+  --text-color-light: #151515;
+  --body-color: #e7e7e7;
+  --container-color: #d2d2d2;
+  --card-color: #bdbdbd;
+  --accent-color: #806734;
+}
+
+/* VARIABLE CSS MOBILE */
 :root {
-  --header-height: 5.6rem;
+  --header-height: 4.6rem;
 
   /* COLOR */
-  --title-color: #212529;
-  --text-color: #212529;
-  --text-color-light: #878a8f;
-  --body-color: #ffffff;
-  --bg-gradient: #212529;
-  --container-color: #ffffff;
+  --title-color: #f4f4f4;
+  --text-color: #676768;
+  --text-color-light: #676768;
+  --body-color: #101010;
+  --container-color: #1e1e1f;
+  --card-color: #222224;
+  --border-color: #292929;
+  --accent-color: #ffce68;
 
   /* FONT AND TYPOGRAPHY */
-  --bf: "Khand", sans-serif;
-  --df-s: 62.5%;
-  --h1-s: 5.4rem;
-  --h2-s: 3.2rem;
-  --h3-s: 2.4rem;
-  --nf-s: 1.9rem;
-  --sf-s: 1.6rem;
-  --xsf-s: 1.4rem;
+  --ff: "Khand", sans-serif;
+  --df-s: 62.5%
+  --fs-24: 2.4rem;
+  --fs-16: 1.6rem;
+  --fs-14: 1.4rem;
+  --fs-12: 1.2rem;
+  --fs-icon: 1rem;
 
   /* FONT WEIGHT */
   --fw-medium: 600;
   --fw-bold: 700;
 
-  /* MARGIN */
-  --m-container-lr: 5vw;
-  --m-xb-s: 5.4rem;
-  --m-b-s: 4.8rem;
-  --m-m-s: 3.2rem;
-  --m-s-s: 2.4rem;
-  --m-xs-s: 1.6rem;
+  /* SHADOW */
+  --shadow-body: -4px 8px 24px 0px rgba(0, 0, 0, 0.25);
+  --shadow-card: 0px 16px 30px 0px rgba(0, 0, 0, 0.25);
+  --shadow-modal: 0px 24px 80px 0px rgba(0, 0, 0, 0.25);
 
-  /* PADDING */
-  --p-section-tb: 5.6rem;
-  --p-section-lr: 5vw;
-  --p-xb-s: 5.4rem;
-  --p-b-s: 4.8rem;
-  --p-m-s: 3.2rem;
-  --p-s-s: 2.4rem;
-  --p-xs-s: 1.6rem;
+  /* TRANSITION */
+  --transition-e: 0.25s ease;
+  --transition-e-i-o: 0.5s ease-in-out;
 
   /* Z-INDEX */
   --z-fixed: 999;
+
+  /* MARGIN */
+  --vw-5: 5vw;
+  --m-16: 1.6rem;
+  --m-12: 1.2rem
 }
 
 /* BASE */
@@ -53,84 +64,73 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* border: 1px solid red; */
 }
 
 html {
+  font-family: var(--ff);
   font-size: var(--df-s);
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--bf);
+  font-family: var(--ff);
   background-color: var(--body-color);
   color: var(--text-color);
-  /* margin: var(--header-height) 0 0 0; */
-  transition: all 0.3s;
-}
-
-/* DARK THEME */
-body.dark-theme {
-  /* COLOR */
-  --title-color: #ffffff;
-  --text-color: #ffffff;
-  --text-color-light: #93969a;
-  --body-color: #212529;
-  --bg-gradient: #ffffff;
-  --container-color: #212529;
-
-  background-color: var(--body-color);
-
-  transition: all 0.3s;
 }
 
 h1,
 h2,
-h3 {
-  color: var(--title-color);
-  font-weight: var(--fw-bold);
-}
+h3 { color: var(--title-color); font-weight: var(--fw-bold); }
 
-ul {
-  list-style: none;
-}
+li { list-style: none; }
 
-a {
-  display: inline-block;
-  text-decoration: none;
-}
+a { text-decoration: none; }
 
-img {
-  width: 100%;
-  height: auto;
-}
+img { width: 100%; height: auto; }
+
+img, ion-icon, a, button, span { display: block;}
 
 button,
-input {
-  color: var(--text-color);
-  font-family: var(--bf);
-  border: none;
-  outline: none;
+input { 
+  color: var(--text-color); 
+  font-family: inherit; 
+  border: none; 
+  outline: none; 
 }
 
-button {
-  cursor: pointer;
-  font-size: var(--sf-s);
+button { cursor: pointer; }
+
+input { width: 100%; }
+
+::selection { 
+  background-color: var(--accent-color); 
+  color: var(--body-color);
 }
+
+:focus { outline-color: var(--accent-color); }
 
 /* REUSABLE */
 .section {
-  padding: var(--p-section-tb) var(--p-section-lr);
+  padding: 1.2rem 1.6rem;
 }
 
 .container {
+  background-color: var(--container-color);
   max-width: 100%;
-  margin: 0 var(--m-container-lr);
+  margin: var(--m-16) var(--vw-5);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-body);
 }
 
 .grid {
   display: grid;
 }
 
-.flex {
-  display: flex;
+.separator {
+  max-width: 100%;
+  height: .1rem;
+  background-color: var(--border-color);
+  margin: var(--m-12) var(--vw-5);
+
 }

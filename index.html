@@ -16,12 +16,6 @@
     <link rel="apple-touch-icon" href="#" />
     <link rel="manifest" href="manifest.webmanifest" />
 
-    <!-- ICON -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
-    />
-
     <!-- CSS -->
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/nav.css" />
@@ -31,73 +25,53 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header class="header">
-      <!-- NAV BAR -->
-      <nav class="nav grid">
-        <div class="nav-bar flex">
-          <span class="logo">MACHINE LUNGS</span>
-          <div class="nav-menu">
-            <i id="nav-toggle" class="bx bx-grid-alt icon"></i>
-            <i id="theme-btn" class="bx bx-moon icon"></i>
+    <header class="header container">
+      <div class="header-container">
+        <div class="nav-bar">
+          <figure><span class="logo">MACHINE LUNGS</span></figure>
+
+          <div class="mobile-nav">
+            <ion-icon name="sunny-outline"></ion-icon>
+            <ion-icon name="chevron-down-outline"></ion-icon>
           </div>
         </div>
-      </nav>
 
-      <!-- SEARCH BAR -->
-      <div class="search-bar">
-        <input
-          type="text"
-          placeholder="Mods, Juice, Cotton, Wire..."
-          class="search"
-        />
-      </div>
+        <div class="separator"></div>
 
-      <!-- HERO -->
-      <div class="hero-section">
-        <div class="hero-container grid">
-          <!-- TEXT -->
-          <div class="text-box">
-            <h1 class="title">
-              SIX <br />
-              LICKS
-            </h1>
-            <p class="description">Six Licks is 100% Premium Quality.</p>
-
-            <p class="currency">PHP<span class="price">150</span></p>
-          </div>
-
-          <!-- IMAGE -->
-          <img
-            src="img/six-licks.png"
-            alt="Six Licks Vape Juice"
-            class="img-best-seller"
-          />
-        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li>
+              <a href="#" class="nav-link"
+                ><ion-icon name="star-outline"></ion-icon>New</a
+              >
+            </li>
+            <li>
+              <a href="#" class="nav-link"
+                ><ion-icon name="bag-outline"></ion-icon>Shop</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
 
     <!-- MAIN -->
-    <main class="main">
-      <!-- NAV GRID -->
-      <div id="nav-menu" class="nav-menu-grid grid">
-        <i id="nav-close" class="bx bx-x nav-close"></i>
-        <ul class="nav-menu-grid-list flex">
-          <li>
-            <a href="#" class="nav-link"><i class="bx bx-star"></i>New</a>
-          </li>
-          <li>
-            <a href="#" class="nav-link"
-              ><i class="bx bx-shopping-bag"></i>Shop</a
-            >
-          </li>
-        </ul>
-      </div>
-    </main>
+    <main class="main"></main>
 
     <!-- FOOTER -->
     <footer class="footer"></footer>
 
     <!-- MAIN SCRIPT -->
     <script src="js/main.js"></script>
+
+    <!-- ICON -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
