@@ -41,7 +41,7 @@
   border-radius: 0.5rem;
   border: 1px solid var(--border-color);
 
-  transition: var(--transition-e);
+  transition: var(--transition-e-i-o);
 }
 
 .header .header-container .nav-bar i:hover,
