@@ -11,8 +11,10 @@ body.dark-theme {
   --body-color: #e7e7e7;
   --container-color: #d2d2d2;
   --card-color: #bdbdbd;
+  --border-color: #eaeaea;
   --accent-color: #806734;
   --accent-color-light: #ad8a42;
+  --theme-btn-color: #805ad5;
 }
 
 /* VARIABLE CSS MOBILE */
@@ -29,6 +31,7 @@ body.dark-theme {
   --border-color: #292929;
   --accent-color: #ffce68;
   --accent-color-light: rgba(255, 207, 104, 0.5);
+  --theme-btn-color: #ffce68;
 
   /* FONT AND TYPOGRAPHY */
   --ff: "Khand", sans-serif;
@@ -62,7 +65,7 @@ body.dark-theme {
 }
 
 /* BASE */
-* {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -120,7 +123,7 @@ input { width: 100%; }
 .container {
   background-color: var(--container-color);
   max-width: 100%;
-  margin: var(--m-16);
+  margin: var(--m-12);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-body);
 }

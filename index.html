@@ -16,6 +16,12 @@
     <link rel="apple-touch-icon" href="#" />
     <link rel="manifest" href="manifest.webmanifest" />
 
+    <!-- ICON -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/nav.css" />
@@ -26,15 +32,15 @@
   <body>
     <!-- HEADER -->
     <header class="header container">
-      <div class="header-container active">
+      <div class="header-container">
         <div class="nav-bar">
           <!-- LOGO -->
           <figure><span class="logo">MACHINE LUNGS</span></figure>
 
           <!-- MOBILE NAV ICON -->
           <div class="mobile-nav">
-            <ion-icon name="sunny-outline"></ion-icon>
-            <ion-icon name="chevron-down-outline"></ion-icon>
+            <i id="theme-btn" class="ri-moon-line"></i>
+            <i id="mobile-nav-btn" class="ri-arrow-down-s-line"></i>
           </div>
         </div>
 
@@ -45,13 +51,11 @@
           <!-- NAV LINK LIST -->
           <ul class="nav-list">
             <li>
-              <a href="#" class="nav-link"
-                ><ion-icon name="star-outline"></ion-icon>New</a
-              >
+              <a href="#" class="nav-link"><i class="ri-star-line"></i>New</a>
             </li>
             <li>
               <a href="#" class="nav-link"
-                ><ion-icon name="bag-outline"></ion-icon>Shop</a
+                ><i class="ri-shopping-bag-line"></i>Shop</a
               >
             </li>
           </ul>
@@ -67,15 +71,5 @@
 
     <!-- MAIN SCRIPT -->
     <script src="js/main.js"></script>
-
-    <!-- ICON -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>

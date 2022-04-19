@@ -1,38 +1,31 @@
 /* SHOW MENU */
-const navMenu = document.getElementById("nav-menu"),
-  navToggle = document.getElementById("nav-toggle"),
-  navClose = document.getElementById("nav-close");
+const elementToggleFunc = function (elem) {
+  elem.classList.toggle("active");
+};
 
-/* MENU SHOW */
-/* Validate if constant exists */
-if (navToggle) {
-  navToggle.addEventListener("click", () => {
-    navMenu.classList.add("show-menu");
-  });
-}
+const navMenu = document.querySelector(".header-container");
+const navMenuBtn = document.getElementById("mobile-nav-btn");
+const navMenuBtnIcon = "ri-arrow-up-s-line";
 
-/* MENU HIDDEN */
-/* Validate if constant exists */
-if (navClose) {
-  navClose.addEventListener("click", () => {
-    navMenu.classList.remove("show-menu");
-  });
-}
+navMenuBtn.addEventListener("click", function () {
+  elementToggleFunc(navMenu);
+  navMenuBtn.classList.toggle(navMenuBtnIcon);
+});
 
 /* REMOVE MENU MOBILE */
-const navLink = document.querySelectorAll(".nav-link");
+// const navLink = document.querySelectorAll(".nav-link");
 
-function linkAction() {
-  const navMenu = document.getElementById("nav-menu");
-  // When we click on each nav__link, we remove the show-menu class
-  navMenu.classList.remove("show-menu");
-}
-navLink.forEach((n) => n.addEventListener("click", linkAction));
+// function linkAction() {
+//   const navMenu = document.getElementById("nav-menu");
+//   // When we click on each nav__link, we remove the show-menu class
+//   navMenu.classList.remove("show-menu");
+// }
+// navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 /* DARK LIGHT THEME */
 const themeButton = document.getElementById("theme-btn");
 const darkTheme = "dark-theme";
-const iconTheme = "bx-sun";
+const iconTheme = "ri-sun-line";
 
 // Previously selected topic (if user selected)
 const selectedTheme = localStorage.getItem("selected-theme");
@@ -42,7 +35,7 @@ const selectedIcon = localStorage.getItem("selected-icon");
 const getCurrentTheme = () =>
   document.body.classList.contains(darkTheme) ? "dark" : "light";
 const getCurrentIcon = () =>
-  themeButton.classList.contains(iconTheme) ? "bx bx-moon" : "bx bx-sun";
+  themeButton.classList.contains(iconTheme) ? "ri-moon-line" : "ri-sun-line";
 
 // We validate if the user previously chose a topic
 if (selectedTheme) {
@@ -50,7 +43,7 @@ if (selectedTheme) {
   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
     darkTheme
   );
-  themeButton.classList[selectedIcon === "bx bx-moon" ? "add" : "remove"](
+  themeButton.classList[selectedIcon === "ri-moon-line" ? "add" : "remove"](
     iconTheme
   );
 }
