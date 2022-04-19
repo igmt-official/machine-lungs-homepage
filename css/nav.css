@@ -1,3 +1,4 @@
+/* HEADER LOGO AND MOBILE NAV ICON */
 .header {
   border-radius: 1rem;
 }
@@ -13,7 +14,7 @@
   max-height: 100%;
 }
 
-.header .nav-bar {
+.header .header-container .nav-bar {
   position: relative;
   display: flex;
   align-items: center;
@@ -21,40 +22,74 @@
   margin: var(--m-12) var(--m-12) 0;
 }
 
-.header .nav-bar .mobile-nav {
+.header .header-container .nav-bar .mobile-nav {
   display: flex;
   gap: var(--m-12);
 }
 
-.header .nav-bar .logo {
+.header .header-container .nav-bar .logo {
   color: var(--title-color);
   font-size: var(--fs-12);
   font-weight: var(--fw-bold);
 }
 
-.header .nav-bar ion-icon {
-  font-size: var(--fs-8);
-  background-color: var(--accent-color);
+.header .header-container .nav-bar ion-icon {
+  font-size: var(--fs-icon);
+  background: var(--accent-color);
   color: var(--container-color);
   padding: 0.6rem;
   border-radius: 0.5rem;
+
+  transition: var(--transition-e);
 }
 
-.header .nav .nav-list {
+.header .header-container .nav-bar ion-icon:hover,
+.header .header-container .nav-bar ion-icon:focus {
+  background-color: var(--accent-color-light);
+}
+
+/* HEADER NAV LINK LIST */
+.header .header-container .nav .nav-list {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 var(--m-12) var(--m-12);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-e-i-o);
 }
 
-.header .nav .nav-list.active {
-  display: flex;
+.header .header-container.active .nav .nav-list {
+  opacity: 1;
+  visibility: visible;
 }
 
-.header .nav .nav-list li .nav-link {
+.header .header-container .nav .nav-list li .nav-link {
   font-size: var(--fs-12);
-  color: var(--title-color);
+  color: var(--accent-color);
   display: flex;
   align-items: center;
   gap: 0.6rem;
+
+  transition: var(--transition-e);
+}
+
+.header .header-container .nav .nav-list li .nav-link:hover {
+  color: var(--accent-color-light);
+}
+
+.header .header-container .nav .nav-list li .nav-link ion-icon {
+  font-size: var(--fs-icon);
+  padding: 0.5rem;
+  color: var(--accent-color);
+  background: var(--card-color);
+  box-shadow: var(--shadow-card);
+  border-radius: 0.5rem;
+
+  transition: var(--transition-e);
+}
+
+.header .header-container .nav .nav-list li .nav-link:hover ion-icon {
+  color: var(--accent-color-light);
 }

@@ -12,6 +12,7 @@ body.dark-theme {
   --container-color: #d2d2d2;
   --card-color: #bdbdbd;
   --accent-color: #806734;
+  --accent-color-light: #ad8a42;
 }
 
 /* VARIABLE CSS MOBILE */
@@ -27,6 +28,7 @@ body.dark-theme {
   --card-color: #222224;
   --border-color: #292929;
   --accent-color: #ffce68;
+  --accent-color-light: rgba(255, 207, 104, 0.5);
 
   /* FONT AND TYPOGRAPHY */
   --ff: "Khand", sans-serif;
@@ -118,7 +120,7 @@ input { width: 100%; }
 .container {
   background-color: var(--container-color);
   max-width: 100%;
-  margin: var(--m-16) var(--vw-5);
+  margin: var(--m-16);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-body);
 }
