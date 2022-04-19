@@ -6,15 +6,15 @@
 body.dark-theme {
   /* COLOR */
   --title-color: #181818;
-  --text-color: #151515;
-  --text-color-light: #151515;
-  --body-color: #e7e7e7;
-  --container-color: #d2d2d2;
-  --card-color: #bdbdbd;
-  --border-color: #eaeaea;
-  --accent-color: #806734;
-  --accent-color-light: #ad8a42;
+  --text-color: #676768;
+  --text-color-light: #676768;
+  --body-color: #ffffff;
+  --container-color: #e9e9e9;
+  --card-color: #d3d3d3;
+  --border-color: #d4d4d4;
+  --accent-color: #cca553;
   --theme-btn-color: #805ad5;
+  --theme-btn-color-second: #4d3680;
 }
 
 /* VARIABLE CSS MOBILE */
@@ -30,8 +30,8 @@ body.dark-theme {
   --card-color: #222224;
   --border-color: #292929;
   --accent-color: #ffce68;
-  --accent-color-light: rgba(255, 207, 104, 0.5);
   --theme-btn-color: #ffce68;
+  --theme-btn-color-second: #cca553;
 
   /* FONT AND TYPOGRAPHY */
   --ff: "Khand", sans-serif;
@@ -43,8 +43,8 @@ body.dark-theme {
   --fs-icon: 1rem;
 
   /* FONT WEIGHT */
-  --fw-medium: 600;
-  --fw-bold: 700;
+  --fw-600: 600;
+  --fw-700: 700;
 
   /* SHADOW */
   --shadow-body: -4px 8px 24px 0px rgba(0, 0, 0, 0.25);
