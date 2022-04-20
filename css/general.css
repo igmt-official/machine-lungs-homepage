@@ -249,7 +249,7 @@ input {
 }
 
 .tags {
-  color: var(--text-color);
+  color: var(--accent-color);
   font-size: var(--fs-12-tags);
 }
 
