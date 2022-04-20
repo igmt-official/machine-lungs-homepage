@@ -51,4 +51,5 @@
 
 .home .container .hero .hero-container .hero-img-box {
   justify-self: center;
+  max-width: 30%;
 }
