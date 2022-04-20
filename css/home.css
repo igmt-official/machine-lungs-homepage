@@ -39,7 +39,7 @@
 } */
 
 .home .container .hero .hero-container {
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
   align-items: center;
   padding: var(--p-18-card);
   border-radius: var(--br-14-card);
@@ -47,4 +47,8 @@
   background-color: var(--card-color);
   box-shadow: var(--shadow-card);
   z-index: 1;
+}
+
+.home .container .hero .hero-container .hero-img-box {
+  justify-self: center;
 }
