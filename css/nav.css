@@ -1,6 +1,6 @@
 /* HEADER LOGO AND MOBILE NAV ICON */
 .header {
-  margin-block-start: min(var(--vph-mobile), var(--m-24));
+  margin-block-start: min(var(--vpw-mobile), var(--m-24));
   border-radius: 1rem;
 }
 

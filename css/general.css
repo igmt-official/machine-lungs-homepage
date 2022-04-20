@@ -36,6 +36,7 @@ body.dark-theme {
   --ff: "Khand", sans-serif;
   --df-s: 62.5%;
   --fs-24-header: clamp(2.4rem, calc(2.24rem + 0.49vw), 2.8rem);
+  --fs-18-subheader: clamp(1.8rem, calc(1.648rem + 0.49vw), 2.2rem);
   --fs-16: clamp(1.6rem, calc(1.44rem + 0.49vw), 2rem);
   --fs-14: clamp(1.4rem, calc(1.248rem + 0.49vw), 1.8rem);
   --fs-12: clamp(1.2rem, calc(1.04rem + 0.49vw), 1.6rem);
@@ -60,6 +61,7 @@ body.dark-theme {
 
   /* MARGIN */
   --m-24: 2.4rem;
+  --m-18: 1.8rem
   --m-16: 1.6rem;
   --m-14: 1.4rem;
   --m-12: 1.2rem;
@@ -67,6 +69,7 @@ body.dark-theme {
 
   /* PADDING */
   --p-24: 2.4rem;
+  --p-18: 1.8rem
   --p-16: 1.6rem;
   --p-14: 1.4rem;
   --p-12: 1.2rem;
