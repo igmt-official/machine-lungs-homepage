@@ -130,20 +130,24 @@ h1{
 
 h1 {
   position: relative;
-  width: fit-content;
+  /* width: fit-content; */
   font-size: var(--fs-24-header);
   margin-block-end: var(--m-18-header);
 }
 
-h1::after {
+/* h1::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   height: 0.3rem;
+  width: 3rem;
+
+  ALTERNATE
   width: 100%;
+
   background-color: var(--accent-color);
-}
+} */
 
 h2 {
   color: var(--title-color);
