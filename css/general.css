@@ -232,7 +232,7 @@ input {
 }
 
 .grid {
-  display: grid;
+  display: grid !important;
 }
 
 .separator {
