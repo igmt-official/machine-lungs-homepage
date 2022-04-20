@@ -191,3 +191,8 @@ input {
   background-color: var(--border-color);
   margin-block: var(--m-12);
 }
+
+.description {
+  font-size: var(--fs-14);
+  line-height: 1.6;
+}
