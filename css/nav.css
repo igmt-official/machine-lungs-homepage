@@ -5,9 +5,10 @@
 
 .header .header-container {
   max-width: 100%;
-  max-height: var(--header-height);
+  max-height: var(--header-height-min);
   overflow: hidden;
   transition: var(--transition-e-i-o);
+  padding: var(--m-12);
 }
 
 .header .header-container.active {
@@ -19,11 +20,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: var(--m-12) var(--m-12) 0;
 }
 
 .header .header-container .nav-bar .mobile-nav {
   display: flex;
+  align-items: center;
   gap: var(--m-12);
 }
 
@@ -65,7 +66,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 var(--m-12) var(--m-12);
 
   opacity: 0;
   visibility: hidden;

@@ -19,7 +19,8 @@ body.dark-theme {
 
 /* VARIABLE CSS MOBILE */
 :root {
-  --header-height: 4.7rem;
+  --header-height-min: 4.7rem;
+  --header-height-max: 5rem;
 
   /* COLOR */
   --title-color: #f4f4f4;
@@ -36,11 +37,11 @@ body.dark-theme {
   /* FONT AND TYPOGRAPHY */
   --ff: "Khand", sans-serif;
   --df-s: 62.5%
-  --fs-24: 2.4rem;
-  --fs-16: 1.6rem;
-  --fs-14: 1.4rem;
-  --fs-12: 1.2rem;
-  --fs-icon: 1rem;
+  --fs-24: clamp(2.4rem, calc(2.24rem + 0.49vw), 2.8rem);
+  --fs-16: clamp(1.6rem, calc(1.44rem + 0.49vw), 2rem);
+  --fs-14: clamp(1.4rem, calc(1.248rem + 0.49vw), 1.8rem);
+  --fs-12: clamp(1.2rem, calc(1.04rem + 0.49vw), 1.6rem);
+  --fs-icon: clamp(1rem, calc(.848rem + 0.49vw), 1.4rem);
 
   /* FONT WEIGHT */
   --fw-600: 600;
@@ -59,9 +60,12 @@ body.dark-theme {
   --z-fixed: 999;
 
   /* MARGIN */
-  --vw-5: 5vw;
   --m-16: 1.6rem;
-  --m-12: 1.2rem
+  --m-12: 1.2rem;
+
+  /* VIEWPORT */
+  --vpw-5: 5vw;
+  --vpw-10: 10vw;
 }
 
 /* BASE */
@@ -123,7 +127,7 @@ input { width: 100%; }
 .container {
   background-color: var(--container-color);
   max-width: 100%;
-  margin: var(--m-12);
+  margin: min(var(--vpw-5), var(--vpw-10));
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-body);
 }
@@ -136,6 +140,6 @@ input { width: 100%; }
   max-width: 100%;
   height: .1rem;
   background-color: var(--border-color);
-  margin: var(--m-12) var(--vw-5);
+  margin-block: var(--m-12);
 
 }
