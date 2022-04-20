@@ -17,13 +17,16 @@
 }
 
 /* HERO SECTION */
-.h1 {
-  /* position: relative; */
+/* .h1 {
+  position: relative;
+  width: fit-content;
+
+  ALTERNATE 
   text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  text-underline-offset: 0.5rem;
   text-decoration-color: var(--accent-color);
   text-decoration-thickness: 0.3rem;
-}
+} */
 
 /* .h1::after {
   content: "";
@@ -31,6 +34,17 @@
   bottom: 0;
   left: 0;
   height: 0.3rem;
-  width: 3rem;
+  width: 100%;
   background-color: var(--accent-color);
 } */
+
+.home .container .hero .hero-container {
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  padding: var(--p-18-card);
+  border-radius: var(--br-14-card);
+  border: 1px solid var(--border-color);
+  background-color: var(--card-color);
+  box-shadow: var(--shadow-card);
+  z-index: 1;
+}

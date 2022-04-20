@@ -25,7 +25,7 @@ navMenuBtn.addEventListener("click", function () {
 /* DARK LIGHT THEME */
 const themeButton = document.getElementById("theme-btn");
 const darkTheme = "dark-theme";
-const iconTheme = "ri-sun-line";
+const iconTheme = "ri-moon-line";
 
 // Previously selected topic (if user selected)
 const selectedTheme = localStorage.getItem("selected-theme");
@@ -43,7 +43,7 @@ if (selectedTheme) {
   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
     darkTheme
   );
-  themeButton.classList[selectedIcon === "ri-sun-line" ? "add" : "remove"](
+  themeButton.classList[selectedIcon === "ri-moon-line" ? "add" : "remove"](
     iconTheme
   );
 }
