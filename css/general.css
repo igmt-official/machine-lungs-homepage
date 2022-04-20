@@ -1,7 +1,6 @@
 /* GOOGLE FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Khand:wght@400;600;700&display=swap");
 
-
 /* DARK THEME */
 body.dark-theme {
   /* COLOR */
@@ -19,8 +18,7 @@ body.dark-theme {
 
 /* VARIABLE CSS MOBILE */
 :root {
-  --header-height-min: 4.7rem;
-  --header-height-max: 5rem;
+  --header-height: 5rem;
 
   /* COLOR */
   --title-color: #f4f4f4;
@@ -36,12 +34,13 @@ body.dark-theme {
 
   /* FONT AND TYPOGRAPHY */
   --ff: "Khand", sans-serif;
-  --df-s: 62.5%
-  --fs-24: clamp(2.4rem, calc(2.24rem + 0.49vw), 2.8rem);
+  --df-s: 62.5%;
+  --fs-24-header: clamp(2.4rem, calc(2.24rem + 0.49vw), 2.8rem);
   --fs-16: clamp(1.6rem, calc(1.44rem + 0.49vw), 2rem);
   --fs-14: clamp(1.4rem, calc(1.248rem + 0.49vw), 1.8rem);
   --fs-12: clamp(1.2rem, calc(1.04rem + 0.49vw), 1.6rem);
-  --fs-icon: clamp(1rem, calc(.848rem + 0.49vw), 1.4rem);
+  /* --fs-nav-link: clamp(0.8rem, calc(0.64rem + 0.49vw), 1.2rem); */
+  --fs-icon: clamp(1.2rem, calc(1.04rem + 0.49vw), 1.6rem);
 
   /* FONT WEIGHT */
   --fw-600: 600;
@@ -60,16 +59,33 @@ body.dark-theme {
   --z-fixed: 999;
 
   /* MARGIN */
+  --m-24: 2.4rem;
   --m-16: 1.6rem;
+  --m-14: 1.4rem;
   --m-12: 1.2rem;
+  --m-10: 1rem;
+
+  /* PADDING */
+  --p-24: 2.4rem;
+  --p-16: 1.6rem;
+  --p-14: 1.4rem;
+  --p-12: 1.2rem;
+  --p-10: 1rem;
 
   /* VIEWPORT */
-  --vpw-5: 5vw;
-  --vpw-10: 10vw;
+  --vph-mobile: 1.8vh;
+  --vph-desktop: 10vh;
+  --vpw-mobile: 5vw;
+  --vpw-desktop: 10vw;
+
+  /* BORDER RADIUS */
+  --br-10: clamp(1rem, calc(0.848rem + 0.49vw), 1.4rem);
 }
 
 /* BASE */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -86,50 +102,83 @@ body {
   font-family: var(--ff);
   background-color: var(--body-color);
   color: var(--text-color);
+
+  transition: var(--transition-e);
 }
 
 h1,
 h2,
-h3 { color: var(--title-color); font-weight: var(--fw-bold); }
-
-li { list-style: none; }
-
-a { text-decoration: none; }
-
-img { width: 100%; height: auto; }
-
-img, ion-icon, a, button, span { display: block;}
-
-button,
-input { 
-  color: var(--text-color); 
-  font-family: inherit; 
-  border: none; 
-  outline: none; 
+h3 {
+  color: var(--title-color);
+  font-weight: var(--fw-bold);
 }
 
-button { cursor: pointer; }
+h1 {
+  font-size: var(--fs-24-header);
+}
 
-input { width: 100%; }
+li {
+  list-style: none;
+}
 
-::selection { 
-  background-color: var(--accent-color); 
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+img,
+ion-icon,
+a,
+button,
+span {
+  display: block;
+}
+
+button,
+input {
+  color: var(--text-color);
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+}
+
+::selection {
+  background-color: var(--accent-color);
   color: var(--body-color);
 }
 
-:focus { outline-color: var(--accent-color); }
+:focus {
+  outline-color: var(--accent-color);
+}
 
 /* REUSABLE */
 .section {
-  padding: 1.2rem 1.6rem;
+  border-radius: var(--br-10);
+  background-color: var(--container-color);
+  max-width: 100%;
+  max-height: 100%;
+  margin-inline: min(var(--vpw-mobile), var(--vpw-desktop));
+  margin-block-end: var(--m-12);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-body);
 }
 
 .container {
-  background-color: var(--container-color);
-  max-width: 100%;
-  margin: min(var(--vpw-5), var(--vpw-10));
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-body);
+  padding: var(--p-12);
+  width: 100%;
+  height: 100%;
 }
 
 .grid {
@@ -138,8 +187,7 @@ input { width: 100%; }
 
 .separator {
   max-width: 100%;
-  height: .1rem;
+  height: 0.1rem;
   background-color: var(--border-color);
   margin-block: var(--m-12);
-
 }
