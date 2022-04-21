@@ -38,10 +38,25 @@
   background-color: var(--accent-color);
 } */
 
-.home .container .hero .hero-container {
+.home .hero .hero-list {
+  display: flex;
+  gap: var(--m-16-feature-card);
+
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+}
+
+.home .hero .hero-list .hero-list-item {
+  min-width: 100%;
+  scroll-snap-align: center;
+}
+
+.home .hero .hero-list .hero-container {
   grid-template-columns: 1fr;
   align-items: center;
-  padding: var(--p-18-card);
+  padding: var(--p-18-feature-card);
   border-radius: var(--br-14-card);
   border: 1px solid var(--border-color);
   background-color: var(--card-color);
@@ -49,7 +64,7 @@
   z-index: 1;
 }
 
-.home .container .hero .hero-container .hero-img-box {
+.home .hero .hero-list .hero-container .hero-img-box {
   justify-self: center;
   max-width: 30%;
 }

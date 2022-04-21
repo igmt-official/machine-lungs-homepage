@@ -68,18 +68,19 @@ body.dark-theme {
 
   /* MARGIN */
   --m-18-header: 1.8rem;
+  --m-16-feature-card: 1.6rem;
   --m-12-subheader: 1.2rem;
   --m-10-feature-icon: 1rem;
 
   --m-24: 2.4rem;
-  --m-18: 1.8rem
+  --m-18: 1.8rem;
   --m-16: 1.6rem;
   --m-14: 1.4rem;
   --m-12: 1.2rem;
   --m-10: 1rem;
 
   /* PADDING */
-  --p-18-card: 1.8rem;
+  --p-18-feature-card: 1.8rem;
 
   --p-24: 2.4rem;
   --p-18: 1.8rem;
@@ -123,7 +124,7 @@ body {
   transition: var(--transition-e);
 }
 
-h1{
+h1 {
   color: var(--title-color);
   font-weight: var(--fw-700);
 }
@@ -155,8 +156,6 @@ h2 {
   font-size: var(--fs-16-subheader);
   margin-block-end: var(--m-12-subheader);
 }
-
-
 
 li {
   list-style: none;
@@ -261,4 +260,23 @@ input {
   color: var(--accent-color);
   font-weight: var(--fw-600);
   font-size: var(--fs-16);
+}
+
+.has-scrollbar::-webkit-scrollbar {
+  width: 0.5rem; /* FOR VERTICAL SCROLLBAR */
+  height: 0.5rem; /* FOR HORIZONTAL SCROLLBAR */
+}
+
+.has-scrollbar::-webkit-scrollbar-track {
+  background-color: var(--border-color);
+  border-radius: 0.5rem;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 0.5rem;
+}
+
+.has-scrollbar::-webkit-scrollbar-button {
+  width: 2rem;
 }
