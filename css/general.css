@@ -14,6 +14,9 @@ body.dark-theme {
   --accent-color: #786130;
   --theme-btn-color: #714fbb;
   --theme-btn-color-second: #4d3680;
+
+  /* HOVER & FOCUS */
+  --hover-container: #d2d2d2;
 }
 
 /* VARIABLE CSS MOBILE */
