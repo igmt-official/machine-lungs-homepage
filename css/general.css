@@ -5,14 +5,14 @@
 body.dark-theme {
   /* COLOR */
   --title-color: #181818;
-  --text-color: #4b4b4b;
+  --text-color: #646464;
   --text-color-light: #676768;
   --body-color: #ffffff;
   --container-color: #e9e9e9;
-  --card-color: #d3d3d3;
-  --border-color: #d4d4d4;
-  --accent-color: #cca553;
-  --theme-btn-color: #805ad5;
+  --card-color: #e2e2e2;
+  --border-color: #dcdcdc;
+  --accent-color: #786130;
+  --theme-btn-color: #714fbb;
   --theme-btn-color-second: #4d3680;
 }
 
