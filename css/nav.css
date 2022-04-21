@@ -2,7 +2,6 @@
   margin-inline: min(var(--vpw-mobile), var(--vpw-desktop));
   /* margin-block-start: min(var(--vpw-mobile), var(--m-24)); */
   margin-block-start: var(--m-24);
-  border-radius: 1rem;
 
   position: fixed;
   inset: 0;
