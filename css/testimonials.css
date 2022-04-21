@@ -4,6 +4,8 @@
 
 .home .testimonials .testimonial-list {
   display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: var(--g-16-card);
   overflow-x: auto;
   scroll-behavior: smooth;

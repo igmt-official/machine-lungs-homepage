@@ -140,6 +140,19 @@ body {
   transition: var(--transition-e);
 }
 
+header {
+  margin-inline: min(var(--vpw-mobile), var(--vpw-desktop));
+  margin-block-start: min(var(--vpw-mobile), var(--m-24));
+  margin-block-end: var(--m-10);
+  border-radius: 1rem;
+}
+
+main {
+  margin-inline: min(var(--vpw-mobile), var(--vpw-desktop));
+  max-width: 100%;
+  max-height: 100%;
+}
+
 h1 {
   color: var(--title-color);
   font-weight: var(--fw-700);
@@ -223,12 +236,7 @@ input {
 .section {
   border-radius: var(--br-10-section);
   background-color: var(--container-color);
-  max-width: 100%;
-  max-height: 100%;
-  margin-inline: min(var(--vpw-mobile), var(--vpw-desktop));
-  margin-block-end: var(--m-10);
   border: 1px solid var(--border-color);
-
   box-shadow: var(--shadow-body);
   -moz-box-shadow: var(--shadow-body);
   -webkit-box-shadow: var(--shadow-body);
