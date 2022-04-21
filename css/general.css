@@ -284,5 +284,5 @@ input {
 }
 
 .has-scrollbar::-webkit-scrollbar-button {
-  width: 2rem;
+  width: 5rem;
 }
