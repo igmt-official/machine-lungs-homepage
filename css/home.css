@@ -51,6 +51,13 @@
   min-width: 100%;
   scroll-snap-align: center;
 
+  border: 1px solid var(--border-color);
+  border-radius: var(--br-14-feature-card);
+  background-color: var(--card-color);
+
+  padding: var(--p-16-feature-card);
+  z-index: 1;
+
   margin-block-end: var(--m-16);
 }
 
@@ -58,13 +65,6 @@
   grid-template-columns: 1fr;
   align-items: center;
   row-gap: var(--g-12-feature-item);
-
-  border: 1px solid var(--border-color);
-  border-radius: var(--br-14-feature-card);
-  background-color: var(--card-color);
-  box-shadow: var(--shadow-card);
-  padding: var(--p-16-feature-card);
-  z-index: 1;
 }
 
 .home

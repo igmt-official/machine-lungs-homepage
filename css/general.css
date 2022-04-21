@@ -216,7 +216,10 @@ input {
   margin-inline: min(var(--vpw-mobile), var(--vpw-desktop));
   margin-block-end: var(--m-10);
   border: 1px solid var(--border-color);
+
   box-shadow: var(--shadow-body);
+  -moz-box-shadow: var(--shadow-body);
+  -webkit-box-shadow: var(--shadow-body);
 }
 
 .container {
