@@ -3,7 +3,7 @@ const elementToggleFunc = function (elem) {
   elem.classList.toggle("active");
 };
 
-const navMenu = document.querySelector(".header-container");
+const navMenu = document.querySelector(".header");
 const navMenuBtn = document.getElementById("mobile-nav-btn");
 const navMenuBtnIcon = "ri-arrow-up-s-line";
 
