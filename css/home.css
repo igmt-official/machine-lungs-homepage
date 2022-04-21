@@ -3,7 +3,7 @@
 }
 
 .home.active {
-  display: block;
+  display: grid;
   row-gap: var(--g-24-section);
   animation: fade 0.5s ease backwards;
 }
@@ -46,13 +46,13 @@
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
+
+  padding-block-end: var(--p-16);
 }
 
 .hero-list-item {
   min-width: 100%;
   scroll-snap-align: center;
-
-  margin-block-end: var(--m-16);
 }
 
 /* .hero-list .hero-list-item:hover,
