@@ -4,6 +4,7 @@
 
 .home.active {
   display: block;
+  row-gap: var(--g-24-section);
   animation: fade 0.5s ease backwards;
 }
 
@@ -40,7 +41,7 @@
 
 .home .hero .hero-list {
   display: flex;
-  gap: var(--g-16-feature-card);
+  gap: var(--g-16-card);
   overflow-x: auto;
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
@@ -52,24 +53,24 @@
   scroll-snap-align: center;
 
   border: 1px solid var(--border-color);
-  border-radius: var(--br-14-feature-card);
+  border-radius: var(--br-14-card);
   background-color: var(--card-color);
 
-  padding: var(--p-16-feature-card);
+  padding: var(--p-16-card);
   z-index: 1;
 
   margin-block-end: var(--m-16);
 }
 
-.home .hero .hero-list .hero-list-item:hover,
+/* .home .hero .hero-list .hero-list-item:hover,
 .home .hero .hero-list .hero-list-item:focus {
   background-color: var(--hover-container);
-}
+} */
 
 .home .hero .hero-list .hero-list-item .hero-container {
   grid-template-columns: 1fr;
   align-items: center;
-  row-gap: var(--g-12-feature-item);
+  row-gap: var(--g-12-card-item);
 }
 
 .home
@@ -96,7 +97,7 @@
   max-width: fit-content;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  column-gap: var(--g-12-feature-item);
+  column-gap: var(--g-12-card-item);
 }
 
 .home .hero .hero-list .hero-list-item .hero-container .hero-img-box {
