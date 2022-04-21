@@ -23,7 +23,8 @@ body.dark-theme {
 
 /* VARIABLE CSS MOBILE */
 :root {
-  --header-height: 5rem;
+  --header-height-min: 5rem;
+  --header-height-max: 9.6rem;
 
   /* COLOR */
   --title-color: #f4f4f4;

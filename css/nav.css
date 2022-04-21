@@ -6,14 +6,14 @@
 
 .header .header-container {
   width: 100%;
-  height: var(--header-height);
+  height: var(--header-height-min);
   overflow: hidden;
   transition: var(--transition-e-i-o);
   padding: var(--p-12);
 }
 
 .header .header-container.active {
-  height: 100%;
+  height: var(--header-height-max);
 }
 
 .header .header-container .nav-bar {
