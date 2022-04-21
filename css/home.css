@@ -64,6 +64,7 @@
   background-color: var(--card-color);
   box-shadow: var(--shadow-card);
   padding: var(--p-16-feature-card);
+  z-index: 1;
 }
 
 .home
