@@ -1,11 +1,9 @@
-.home .testimonials .testimonial-title {
+.testimonial-title {
   margin-block-end: var(--m-12-subheader);
 }
 
-.home .testimonials .testimonial-list {
+.testimonial-list {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
   gap: var(--g-16-card);
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -13,7 +11,7 @@
   scroll-snap-type: inline mandatory;
 }
 
-.home .testimonials .testimonial-list-item {
+.testimonial-list-item {
   min-width: 100%;
   scroll-snap-align: center;
 
@@ -21,31 +19,22 @@
   border-radius: var(--br-14-card);
   background-color: var(--card-color);
 
-  padding: var(--p-16-card);
   z-index: 1;
 
   margin-block-end: var(--m-16);
 }
 
-.home .testimonials .testimonial-list-item .testimonial-container {
+.testimonial-container {
   row-gap: var(--g-12-card-item);
 }
 
-.home
-  .testimonials
-  .testimonial-list-item
-  .testimonial-container
-  .testimonial-description {
+.testimonial-description {
   color: var(--text-color-light);
   font-size: var(--fs-14-section-p);
   line-height: 1.6;
 }
 
-.home
-  .testimonials
-  .testimonial-list-item
-  .testimonial-container
-  .testimonial-name {
+.testimonial-name {
   justify-self: end;
   font-size: var(--fs-12);
 }

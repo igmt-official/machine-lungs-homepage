@@ -39,7 +39,7 @@
   background-color: var(--accent-color);
 } */
 
-.home .hero .hero-list {
+.hero-list {
   display: flex;
   gap: var(--g-16-card);
   overflow-x: auto;
@@ -48,7 +48,7 @@
   scroll-snap-type: inline mandatory;
 }
 
-.home .hero .hero-list .hero-list-item {
+.hero-list-item {
   min-width: 100%;
   scroll-snap-align: center;
 
@@ -56,30 +56,23 @@
   border-radius: var(--br-14-card);
   background-color: var(--card-color);
 
-  padding: var(--p-16-card);
   z-index: 1;
 
   margin-block-end: var(--m-16);
 }
 
-/* .home .hero .hero-list .hero-list-item:hover,
-.home .hero .hero-list .hero-list-item:focus {
+/* .hero-list .hero-list-item:hover,
+.hero-list .hero-list-item:focus {
   background-color: var(--hover-container);
 } */
 
-.home .hero .hero-list .hero-list-item .hero-container {
+.hero-container {
   grid-template-columns: 1fr;
   align-items: center;
   row-gap: var(--g-12-card-item);
 }
 
-.home
-  .hero
-  .hero-list
-  .hero-list-item
-  .hero-container
-  .hero-text-box
-  .hero-title {
+.hero-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -87,20 +80,14 @@
   margin-block-end: var(--m-12-subheader);
 }
 
-.home
-  .hero
-  .hero-list
-  .hero-list-item
-  .hero-container
-  .hero-text-box
-  .hero-description {
+.hero-description {
   max-width: fit-content;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   column-gap: var(--g-12-card-item);
 }
 
-.home .hero .hero-list .hero-list-item .hero-container .hero-img-box {
+.hero-img-box {
   justify-self: center;
   width: 30%;
 }
