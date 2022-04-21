@@ -64,6 +64,11 @@
   row-gap: var(--g-12-feature-item);
 }
 
+.home .hero .hero-list .hero-list-item .hero-container:hover,
+.home .hero .hero-list .hero-list-item .hero-container:focus {
+  background-color: transparent;
+}
+
 .home
   .hero
   .hero-list
