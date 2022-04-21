@@ -1,5 +1,7 @@
 /* GOOGLE FONTS */
-@import url("https://fonts.googleapis.com/css2?family=Khand:wght@400;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Khand:wght@400;600;700&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 /* DARK THEME */
 body.dark-theme {
@@ -39,7 +41,8 @@ body.dark-theme {
   --hover-container: #353535;
 
   /* FONT AND TYPOGRAPHY */
-  --ff: "Khand", sans-serif;
+  /* --ff: "Khand", sans-serif; */
+  --ff: "Poppins", sans-serif;
   --df-s: 62.5%;
 
   --fs-24-header: clamp(2.4rem, calc(2.24rem + 0.49vw), 2.8rem);
