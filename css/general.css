@@ -32,6 +32,9 @@ body.dark-theme {
   --theme-btn-color: #ffce68;
   --theme-btn-color-second: #b39049;
 
+  /* HOVER & FOCUS */
+  --hover-container: #353535;
+
   /* FONT AND TYPOGRAPHY */
   --ff: "Khand", sans-serif;
   --df-s: 62.5%;

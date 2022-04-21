@@ -61,6 +61,11 @@
   margin-block-end: var(--m-16);
 }
 
+.home .hero .hero-list .hero-list-item:hover,
+.home .hero .hero-list .hero-list-item:focus {
+  background-color: var(--hover-container);
+}
+
 .home .hero .hero-list .hero-list-item .hero-container {
   grid-template-columns: 1fr;
   align-items: center;
