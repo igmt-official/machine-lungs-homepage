@@ -55,6 +55,18 @@
   margin-block-end: var(--m-12-subheader);
 }
 
+.hero-name {
+  color: var(--title-color);
+  font-weight: var(--fw-600);
+  font-size: var(--fs-16-subheader);
+}
+
+.price {
+  color: var(--accent-color);
+  font-weight: var(--fw-600);
+  font-size: var(--fs-16);
+}
+
 .hero-description {
   max-width: fit-content;
   grid-template-columns: repeat(2, 1fr);

@@ -7,7 +7,7 @@
   /* IN DISPLAY GRID MIN AND MAX DOESN'T EFFECT */
   /* THIS IS FOR OVERFLOW, SO THE GRID TEMPLATE COLUMN WIDTH MINIMUM WILL NOT LONGER AUTO */
   grid-template-columns: minmax(0, 1fr);
-  row-gap: var(--g-24-section);
+  row-gap: var(--g-32-section);
   animation: fade 0.5s ease backwards;
 }
 

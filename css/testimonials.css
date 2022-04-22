@@ -1,7 +1,3 @@
-.testimonial-title {
-  margin-block-end: var(--m-12-subheader);
-}
-
 .testimonial-list {
   display: flex;
   gap: var(--g-16-card);
@@ -19,7 +15,7 @@
 }
 
 .testimonial-container {
-  row-gap: var(--g-12-card-item);
+  row-gap: var(--g-8-card-item);
 }
 
 .testimonial-description {
