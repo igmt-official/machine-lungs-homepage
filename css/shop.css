@@ -21,6 +21,31 @@
 }
 
 /* PRODUCTS */
+.filter-list {
+  display: none;
+}
+
+.filter-select-box {
+  width: 100%;
+  position: relative;
+  margin-block-end: var(--m-24-select-box);
+}
+
+.filter-select {
+  width: 100%;
+  background-color: var(--container-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--p-12-select-box) var(--p-16-select-box);
+  border: 0.1rem solid var(--border-color);
+  border-radius: var(--br-14-card);
+  font-size: var(--fs-14-select-box);
+}
+
+.filter-select.active .select-icon {
+  transform: rotate(0.5turn);
+}
 
 .products-title {
   color: var(--title-color);

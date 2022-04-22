@@ -52,6 +52,7 @@ body.dark-theme {
   /* --fs-18-subheader: clamp(1.8rem, calc(1.648rem + 0.49vw), 2.2rem); */
   --fs-16-subheader: clamp(1.6rem, calc(1.44rem + 0.49vw), 2rem);
   --fs-14-section-p: clamp(1.4rem, calc(1.248rem + 0.49vw), 1.8rem);
+  --fs-14-select-box: clamp(1.4rem, calc(1.248rem + 0.49vw), 1.8rem);
   --fs-12-tags: clamp(1.2rem, calc(1.04rem + 0.49vw), 1.6rem);
   --fs-icon: clamp(1.2rem, calc(1.04rem + 0.49vw), 1.6rem);
 
@@ -83,6 +84,8 @@ body.dark-theme {
   --m-12-subheader: 1.2rem;
   --m-10-feature-icon: 1rem;
 
+  --m-24-select-box: 2.4rem;
+
   --m-16-separator: 1.6rem;
 
   --m-24: 2.4rem;
@@ -95,6 +98,9 @@ body.dark-theme {
   /* PADDING */
   --p-16-article: 1.6rem;
   --p-16-card: 1.6rem;
+
+  --p-16-select-box: 1.6rem;
+  --p-12-select-box: 1.2rem;
 
   --p-96: 9.6rem;
   --p-86: 8.6rem;
@@ -152,7 +158,8 @@ header {
   max-width: 100%;
 }
 
-main {
+main,
+article {
   max-width: 100%;
   max-height: 100%;
 }
