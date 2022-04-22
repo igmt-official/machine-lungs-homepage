@@ -101,6 +101,14 @@
   width: 30%;
 }
 
+.hero-list-item > a .hero-img-box img {
+  transition: var(--transition-e);
+}
+
+.hero-list-item > a:hover .hero-img-box img {
+  transform: scale(1.1);
+}
+
 /* TESTIMONIALS */
 .testimonial-list {
   display: flex;
