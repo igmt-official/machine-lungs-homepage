@@ -1,3 +1,5 @@
+"use strict";
+
 // SHOW MENU
 const elementToggleFunc = function (elem) {
   elem.classList.toggle("active");
