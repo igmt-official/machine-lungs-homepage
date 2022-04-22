@@ -1,0 +1,21 @@
+.shop {
+  display: none;
+}
+
+.shop.active {
+  display: grid;
+  /* IN DISPLAY GRID MIN AND MAX DOESN'T EFFECT */
+  /* THIS IS FOR OVERFLOW, SO THE GRID TEMPLATE COLUMN WIDTH MINIMUM WILL NOT LONGER AUTO */
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: var(--g-32-section);
+  animation: fade 0.5s ease backwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

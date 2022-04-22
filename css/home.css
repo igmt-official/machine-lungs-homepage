@@ -19,3 +19,116 @@
     opacity: 1;
   }
 }
+
+/* HERO */
+/* .h1 {
+  position: relative;
+  width: fit-content;
+
+  ALTERNATE 
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: var(--accent-color);
+  text-decoration-thickness: 0.3rem;
+} */
+
+/* .h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.3rem;
+  width: 100%;
+  background-color: var(--accent-color);
+} */
+
+.hero-list {
+  display: flex;
+  gap: var(--g-16-card);
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+
+  padding-block-end: var(--p-16);
+}
+
+.hero-list-item {
+  min-width: 100%;
+  scroll-snap-align: center;
+}
+
+/* .hero-list .hero-list-item:hover,
+  .hero-list .hero-list-item:focus {
+    background-color: var(--hover-container);
+  } */
+
+.hero-container {
+  grid-template-columns: 1fr;
+  align-items: center;
+  row-gap: var(--g-12-card-item);
+}
+
+.hero-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-block-end: var(--m-12-subheader);
+}
+
+.hero-name {
+  color: var(--title-color);
+  font-weight: var(--fw-600);
+  font-size: var(--fs-16-subheader);
+}
+
+.price {
+  color: var(--accent-color);
+  font-weight: var(--fw-600);
+  font-size: var(--fs-16);
+}
+
+.hero-description {
+  max-width: fit-content;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  column-gap: var(--g-12-card-item);
+}
+
+.hero-img-box {
+  justify-self: center;
+  width: 30%;
+}
+
+/* TESTIMONIALS */
+.testimonial-list {
+  display: flex;
+  gap: var(--g-16-card);
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+
+  padding-block-end: var(--p-16);
+}
+
+.testimonial-list-item {
+  min-width: 100%;
+  scroll-snap-align: center;
+}
+
+.testimonial-container {
+  row-gap: var(--g-8-card-item);
+}
+
+.testimonial-description {
+  color: var(--text-color-light);
+  font-size: var(--fs-14-section-p);
+  line-height: 1.6;
+}
+
+.testimonial-name {
+  justify-self: end;
+  font-size: var(--fs-12);
+}
