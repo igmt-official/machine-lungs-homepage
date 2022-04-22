@@ -119,13 +119,18 @@
   row-gap: var(--g-16-card-item);
   max-width: 100%;
   max-height: 100%;
+
+  background-color: var(--card-color);
+  border-radius: var(--br-16-large-card-item);
+  border: 1px solid var(--border-color);
+  padding: var(--p-16-card);
 }
 
 .products-img {
   position: relative;
   max-width: 100%;
   max-height: 100%;
-  border-radius: var(--br-16-large-card-item);
+  border-radius: var(--br-12-small-card-item);
   overflow: hidden;
 }
 
@@ -187,4 +192,8 @@
 .products-category {
   color: var(--text-color);
   font-size: var(--fs-14-section-p);
+}
+
+.products-list-item > a:hover .products-title {
+  color: var(--accent-color);
 }
