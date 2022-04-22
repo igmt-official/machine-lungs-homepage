@@ -51,8 +51,8 @@
 .select-list {
   position: absolute;
   top: calc(100% + 0.8rem);
-  max-width: 100%;
-  max-height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: var(--g-8-card-item);
@@ -123,9 +123,6 @@
 
 .products-img {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
   max-width: 100%;
   max-height: 100%;
   border-radius: var(--br-16-card-item);
@@ -150,8 +147,13 @@
 
 .products-img img {
   max-width: 30%;
+  margin-inline: auto;
   object-fit: cover;
   transition: var(--transition-e);
+}
+
+.products-list-item > a:hover img {
+  transform: scale(1.1);
 }
 
 .products-item-icon {
