@@ -81,7 +81,7 @@
   font-size: var(--fs-14-select-box);
   text-align: left;
   padding: var(--p-8-select-box-item-block) var(--p-10-select-box-item-inline);
-  width: 100%;
+  min-width: 100%;
   border-radius: var(--br-8-select-box-item);
 }
 
