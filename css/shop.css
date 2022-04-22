@@ -47,6 +47,24 @@
   transform: rotate(180deg);
 }
 
+.select-list {
+  position: absolute;
+  top: calc(100% + 0.8rem);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--g-8-card-item);
+  background-color: var(--container-color);
+  border: 0.1rem solid var(--border-color);
+  border-radius: var(--br-14-card);
+  padding: var(--p-12-select-box) var(--p-16-select-box);
+
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .products-title {
   color: var(--title-color);
   font-weight: var(--fw-600);
