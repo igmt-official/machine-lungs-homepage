@@ -65,5 +65,6 @@
   border-radius: var(--br-12-small-card-item);
 }
 
-.social-list-item > a:hover {
+.social-list-item > a i {
+  font-size: var(--fs-24);
 }
