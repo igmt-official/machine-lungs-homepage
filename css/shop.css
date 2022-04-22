@@ -87,6 +87,34 @@
   background-color: var(--border-color);
 }
 
+.products-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--g-24-card-item);
+}
+
+.products-list-item {
+  display: none;
+}
+
+.products-list-item.active {
+  display: block;
+  animation: scaleUp 0.25s ease forwards;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.products-img img {
+  width: 30%;
+}
+
 .products-title {
   color: var(--title-color);
   font-weight: var(--fw-600);
