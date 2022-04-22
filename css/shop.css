@@ -111,6 +111,18 @@
   }
 }
 
+.products-list-item a {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--g-16-card-item);
+}
+
+.products-img {
+  position: relative;
+  width: 100%;
+  border-radius: var(--br-16-card-item);
+}
+
 .products-img img {
   width: 30%;
 }
