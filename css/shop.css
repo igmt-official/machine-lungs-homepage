@@ -26,7 +26,8 @@
 }
 
 .filter-select-box {
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
   position: relative;
   margin-block-end: var(--m-24-select-box);
 }
@@ -50,7 +51,8 @@
 .select-list {
   position: absolute;
   top: calc(100% + 0.8rem);
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: var(--g-8-card-item);
@@ -115,7 +117,8 @@
   display: grid;
   grid-template-columns: 1fr;
   row-gap: var(--g-16-card-item);
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .products-img {
@@ -123,7 +126,8 @@
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: var(--br-16-card-item);
   overflow: hidden;
 }
@@ -146,6 +150,8 @@
 
 .products-img img {
   width: 30%;
+  object-fit: cover;
+  transition: var(--transition-e);
 }
 
 .products-item-icon {
