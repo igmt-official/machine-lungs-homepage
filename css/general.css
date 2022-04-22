@@ -61,6 +61,7 @@ body.dark-theme {
   --fs-16: clamp(1.6rem, calc(1.44rem + 0.49vw), 2rem);
   --fs-14: clamp(1.4rem, calc(1.248rem + 0.49vw), 1.8rem);
   --fs-12: clamp(1.2rem, calc(1.04rem + 0.49vw), 1.6rem);
+  --fs-8: clamp(0.8rem, calc(0.64rem + 0.49vw), 1.2rem);
   /* --fs-nav-link: clamp(0.8rem, calc(0.64rem + 0.49vw), 1.2rem); */
 
   /* FONT WEIGHT */
@@ -101,6 +102,8 @@ body.dark-theme {
 
   --p-16-select-box: 1.6rem;
   --p-12-select-box: 1.2rem;
+  --p-10-select-box-item: 1rem;
+  --p-8-select-box-item: 0.8rem;
 
   --p-96: 9.6rem;
   --p-86: 8.6rem;
@@ -128,6 +131,7 @@ body.dark-theme {
   /* BORDER RADIUS */
   --br-14-card: clamp(1.4rem, calc(1.248rem + 0.49vw), 1.8rem);
   --br-10-section: clamp(1rem, calc(0.848rem + 0.49vw), 1.4rem);
+  --br-8-select-box-item: clamp(0.8rem, calc(0.64rem + 0.49vw), 1.2rem);
 }
 
 /* BASE */

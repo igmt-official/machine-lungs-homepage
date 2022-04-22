@@ -66,10 +66,25 @@
   transition: 0.15s ease-in-out;
 }
 
-.filter-select.active .select-list {
+/* + Sign to target outside of element (the second element), not on the inside of the element which is the child of the parent element*/
+.filter-select.active + .select-list {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
+}
+
+.select-list-item button {
+  background-color: var(--container-color);
+  color: var(--text-color-light);
+  font-size: var(--fs-14-select-box);
+  text-align: left;
+  padding: var(--p-8-select-box-item) var(--p-10-select-box-item);
+  width: 100%;
+  border-radius: var(--br-8-select-box-item);
+}
+
+.select-list-item button:hover {
+  background-color: var(--border-color);
 }
 
 .products-title {
