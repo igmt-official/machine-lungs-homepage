@@ -5,7 +5,7 @@
 .home.active {
   display: grid;
   /* IN DISPLAY GRID MIN AND MAX DOESN'T EFFECT */
-  /* FOR OVERFLOW SO THE GRID TEMPLATE COLUMN WIDTH MINIMUM WILL NOT LONGER AUTO */
+  /* THIS IS FOR OVERFLOW, SO THE GRID TEMPLATE COLUMN WIDTH MINIMUM WILL NOT LONGER AUTO */
   grid-template-columns: minmax(0, 1fr);
   row-gap: var(--g-24-section);
   animation: fade 0.5s ease backwards;

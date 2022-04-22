@@ -303,9 +303,29 @@ header {
   font-size: var(--fs-16);
 }
 
-.has-scrollbar::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 0.5rem; /* FOR VERTICAL SCROLLBAR */
   height: 0.5rem; /* FOR HORIZONTAL SCROLLBAR */
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--border-color);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-button {
+  width: 5rem;
+}
+
+/* 
+.has-scrollbar::-webkit-scrollbar {
+  width: 0.5rem; FOR VERTICAL SCROLLBAR
+  height: 0.5rem; FOR HORIZONTAL SCROLLBAR 
 }
 
 .has-scrollbar::-webkit-scrollbar-track {
@@ -321,3 +341,4 @@ header {
 .has-scrollbar::-webkit-scrollbar-button {
   width: 5rem;
 }
+*/
