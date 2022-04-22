@@ -83,7 +83,7 @@ const filterFunc = function (selectedValue) {
 // DARK LIGHT THEME
 const themeButton = document.getElementById("theme-btn");
 const darkTheme = "dark-theme";
-const iconTheme = "ri-moon-line";
+const iconTheme = "ri-sun-line";
 
 // Previously selected topic (if user selected)
 const selectedTheme = localStorage.getItem("selected-theme");
@@ -93,7 +93,7 @@ const selectedIcon = localStorage.getItem("selected-icon");
 const getCurrentTheme = () =>
   document.body.classList.contains(darkTheme) ? "dark" : "light";
 const getCurrentIcon = () =>
-  themeButton.classList.contains(iconTheme) ? "ri-sun-line" : "ri-moon-line";
+  themeButton.classList.contains(iconTheme) ? "ri-moon-line" : "ri-sun-line";
 
 // We validate if the user previously chose a topic
 if (selectedTheme) {
@@ -101,7 +101,7 @@ if (selectedTheme) {
   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
     darkTheme
   );
-  themeButton.classList[selectedIcon === "ri-moon-line" ? "add" : "remove"](
+  themeButton.classList[selectedIcon === "ri-sun-line" ? "add" : "remove"](
     iconTheme
   );
 }
