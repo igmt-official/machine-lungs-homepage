@@ -136,6 +136,7 @@ body.dark-theme {
   --br-14-card: clamp(1.4rem, calc(1.248rem + 0.49vw), 1.8rem);
 
   --br-16-card-item: clamp(1.6rem, calc(1.44rem + 0.49vw), 2rem);
+  --br-12-card-item: clamp(1.2rem, calc(1.04rem + 0.49vw), 1.6rem);
 
   --br-8-select-box-item: clamp(0.8rem, calc(0.64rem + 0.49vw), 1.2rem);
 }
