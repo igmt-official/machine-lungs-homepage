@@ -125,7 +125,7 @@
   position: relative;
   max-width: 100%;
   max-height: 100%;
-  border-radius: var(--br-16-card-item);
+  border-radius: var(--br-16-large-card-item);
   overflow: hidden;
 }
 
@@ -164,7 +164,7 @@
   transform: translate(-50%, -50%) scale(var(--scale));
   background-color: rgba(30, 30, 31, 0.75);
   color: var(--accent-color);
-  border-radius: var(--br-12-card-item);
+  border-radius: var(--br-12-small-card-item);
   padding: var(--p-16-card);
   backdrop-filter: blur(1rem);
   font-size: var(--fs-24);
