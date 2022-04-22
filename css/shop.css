@@ -119,6 +119,9 @@
 
 .products-img {
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
   width: 100%;
   border-radius: var(--br-16-card-item);
 }
