@@ -5,8 +5,8 @@ const elementToggleFunc = function (elem) {
   elem.classList.toggle("active");
 };
 
-const navMenu = document.querySelector(".header");
-const navMenuBtn = document.getElementById("mobile-nav-btn");
+const navMenu = document.querySelector("[data-nav]");
+const navMenuBtn = document.querySelector("[data-nav-btn]");
 const navMenuBtnIcon = "ri-arrow-up-s-line";
 
 navMenuBtn.addEventListener("click", function () {
