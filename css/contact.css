@@ -1,0 +1,41 @@
+.contact {
+  display: none;
+}
+
+.contact.active {
+  display: grid;
+  /* IN DISPLAY GRID MIN AND MAX DOESN'T EFFECT */
+  /* THIS IS FOR OVERFLOW, SO THE GRID TEMPLATE COLUMN WIDTH MINIMUM WILL NOT LONGER AUTO */
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: var(--g-32-section);
+  animation: fade 0.5s ease backwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.map {
+  position: relative;
+  width: 100%;
+  height: 25rem;
+  border-radius: var(--br-16-card-item);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.map figure {
+  height: 100%;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: grayscale(1) invert(1);
+}

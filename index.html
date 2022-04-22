@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/shop.css" />
+    <link rel="stylesheet" href="css/contact.css" />
 
     <title>Machine Lungs - Vapeshop</title>
   </head>
@@ -61,6 +62,8 @@
           <li>
             <a href="#" class="nav-link">Shop</a>
           </li>
+
+          <li><a href="#" class="nav-link">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -68,10 +71,11 @@
     <!-- MAIN -->
     <main class="main">
       <!-- HOME ARTICLE -->
-      <article class="home">
+      <article class="home" data-page="home">
         <!-- BEST SELLER -->
         <section class="hero">
           <h2 class="h2">BEST SELLERS</h2>
+          <!-- BEST SELLER LIST -->
           <ul class="hero-list has-scrollbar">
             <li class="hero-list-item">
               <a href="#" class="container">
@@ -166,6 +170,7 @@
         <!-- TESTIMONIALS -->
         <section class="testimonials">
           <h2 class="h2">TESTIMONIALS</h2>
+          <!-- TESTIMONIALS LIST -->
           <ul class="testimonial-list has-scrollbar">
             <li class="testimonial-list-item">
               <div class="container testimonial-container grid">
@@ -205,8 +210,8 @@
       </article>
 
       <!-- SHOP ARTICLE -->
-      <article class="shop active">
-        <section class="category">
+      <article class="shop" data-page="shop">
+        <section class="products">
           <ul class="filter-list">
             <li class="filter-list-item">
               <button class="active">All</button>
@@ -234,6 +239,7 @@
           </ul>
 
           <div class="filter-select-box">
+            <!-- SELECT FILTER BOX BUTTON -->
             <button class="filter-select" data-select>
               <div class="select-value" data-select-value>Select Category</div>
 
@@ -242,6 +248,7 @@
               </div>
             </button>
 
+            <!-- SELECT FILTER LIST ITEM BOX -->
             <ul class="select-list">
               <li class="select-list-item">
                 <button data-select-item>All</button>
@@ -264,6 +271,7 @@
             </ul>
           </div>
 
+          <!-- PRODUCT LIST ITEM -->
           <ul class="products-list">
             <li
               class="products-list-item active"
@@ -340,6 +348,26 @@
               </a>
             </li>
           </ul>
+        </section>
+      </article>
+
+      <!-- NEW ARRIVAL -->
+
+      <!-- CONTACT -->
+      <article class="contact active" data-page="contact">
+        <section class="contact-container">
+          <h2 class="h2">CONTACT</h2>
+          <div class="map">
+            <figure>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d239.96801610797195!2d120.66647713077114!3d15.778188329224912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339131b62aa7151f%3A0x85aa479db88d6942!2sLBC%20Express%20-%20Cuyapo!5e0!3m2!1sen!2sph!4v1650635086149!5m2!1sen!2sph"
+                width="800"
+                height="600"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </figure>
+          </div>
         </section>
       </article>
     </main>
