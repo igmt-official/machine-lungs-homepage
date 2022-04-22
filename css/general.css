@@ -213,13 +213,14 @@ span {
 
 button,
 input {
-  color: var(--text-color);
+  color: var(--title-color);
   font-family: inherit;
   border: none;
   outline: none;
 }
 
 button {
+  background: none;
   cursor: pointer;
 }
 
