@@ -20,6 +20,13 @@
   }
 }
 
+/* NEW ARRIVAL */
+.new-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--g-24-card-item);
+}
+
 .new-list-item {
   display: none;
 }
@@ -38,7 +45,6 @@
   }
 }
 
-/* NEW ARRIVAL */
 .new-list-item > a {
   display: grid;
   grid-template-columns: 1fr;
