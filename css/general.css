@@ -37,6 +37,7 @@ body.dark-theme {
   --card-color: #222224;
   --border-color: #292929;
   --accent-color: #ffce68;
+  --accent-hover-color: rgba(255, 207, 104, 0.5);
   --theme-btn-color: #ffce68;
   --theme-btn-color-second: #b39049;
 

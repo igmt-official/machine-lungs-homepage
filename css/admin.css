@@ -1,0 +1,29 @@
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.add-product {
+  display: flex;
+  align-items: center;
+  gap: var(--g-12-card-item);
+  max-width: 100%;
+  max-height: 100%;
+  background-color: var(--accent-color);
+  color: var(--body-color);
+  font-size: var(--fs-14);
+  padding: var(--p-12-select-box-block) var(--p-16-select-box-inline);
+  border-radius: var(--br-12-small-card-item);
+  border: 1px solid var(--border-color);
+  justify-self: end;
+
+  transition: var(--transition-e);
+}
+
+.add-product i {
+  font-size: var(--fs-16);
+}
+
+.add-product:hover {
+  background-color: var(--accent-hover-color);
+}
