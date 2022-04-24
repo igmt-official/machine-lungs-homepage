@@ -1,11 +1,11 @@
-/* GOOGLE FONTS */
+/* !GOOGLE FONTS */
 /* @import url("https://fonts.googleapis.com/css2?family=Khand:wght@400;600;700&display=swap"); */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
-/* DARK THEME */
+/* !DARK THEME */
 body.dark-theme {
-  /* COLOR */
+  /* !COLOR */
   --title-color: #181818;
   --text-color: #646464;
   --text-color-light: #676768;
@@ -15,19 +15,20 @@ body.dark-theme {
   --card-color: #e2e2e2;
   --border-color: #dcdcdc;
   --accent-color: #786130;
+  --accent-hover-color: #867145;
   --theme-btn-color: #714fbb;
   --theme-btn-color-second: #4d3680;
 
-  /* HOVER & FOCUS */
+  /* !HOVER & FOCUS */
   --hover-container: #d2d2d2;
 }
 
-/* VARIABLE CSS MOBILE */
+/* !VARIABLE CSS MOBILE */
 :root {
   --header-height-min: 6rem;
   --header-height-max: 11.4rem;
 
-  /* COLOR */
+  /* !COLOR */
   --title-color: #f4f4f4;
   --text-color: #676768;
   --text-color-light: #d6d6d6;
@@ -41,10 +42,10 @@ body.dark-theme {
   --theme-btn-color: #ffce68;
   --theme-btn-color-second: #b39049;
 
-  /* HOVER & FOCUS */
+  /* !HOVER & FOCUS */
   --hover-container: #353535;
 
-  /* FONT AND TYPOGRAPHY */
+  /* !FONT AND TYPOGRAPHY */
   /* --ff: "Khand", sans-serif; */
   --ff: "Poppins", sans-serif;
   --df-s: 62.5%;
@@ -65,23 +66,27 @@ body.dark-theme {
   --fs-8: clamp(0.8rem, calc(0.64rem + 0.49vw), 1.2rem);
   /* --fs-nav-link: clamp(0.8rem, calc(0.64rem + 0.49vw), 1.2rem); */
 
-  /* FONT WEIGHT */
+  /* !ADMIN SIDE TYPOGRAPHY */
+  --fs-10-admin-subheader: clamp(1rem, calc(0.768rem + 0.73vw), 1.6rem);
+  --fs-8-admin-p: clamp(0.8rem, calc(0.56rem + 0.73vw), 1.4rem);
+
+  /* !FONT WEIGHT */
   --fw-600: 600;
   --fw-700: 700;
 
-  /* SHADOW */
+  /* !SHADOW */
   --shadow-body: -4px 8px 24px 0px rgba(0, 0, 0, 0.25);
   --shadow-card: 0px 16px 30px 0px rgba(0, 0, 0, 0.25);
   --shadow-modal: 0px 24px 80px 0px rgba(0, 0, 0, 0.25);
 
-  /* TRANSITION */
+  /* !TRANSITION */
   --transition-e: 0.25s ease;
   --transition-e-i-o: 0.5s ease-in-out;
 
-  /* Z-INDEX */
+  /* !Z-INDEX */
   --z-fixed: 999;
 
-  /* MARGIN */
+  /* !MARGIN */
   --m-18-header: 1.8rem;
   --m-12-subheader: 1.2rem;
   --m-10-feature-icon: 1rem;
@@ -97,7 +102,7 @@ body.dark-theme {
   --m-12: 1.2rem;
   --m-10: 1rem;
 
-  /* PADDING */
+  /* !PADDING */
   --p-16-article: 1.6rem;
   --p-16-card: 1.6rem;
 
@@ -116,7 +121,7 @@ body.dark-theme {
   --p-12: 1.2rem;
   --p-10: 1rem;
 
-  /* GAP */
+  /* !GAP */
   --g-32-section: 3.2rem;
 
   --g-16-card: 1.6rem;
@@ -126,13 +131,13 @@ body.dark-theme {
   --g-12-card-item: 1.2rem;
   --g-8-card-item: 0.8rem;
 
-  /* VIEWPORT */
+  /* !VIEWPORT */
   --vph-mobile: 2.113vh;
   --vph-desktop: 10vh;
   --vpw-mobile: 5vw;
   --vpw-desktop: 10vw;
 
-  /* BORDER RADIUS */
+  /* !BORDER RADIUS */
   --br-10-section: clamp(1rem, calc(0.848rem + 0.49vw), 1.4rem);
 
   --br-14-card: clamp(1.4rem, calc(1.248rem + 0.49vw), 1.8rem);
@@ -143,7 +148,7 @@ body.dark-theme {
   --br-8-select-box-item: clamp(0.8rem, calc(0.64rem + 0.49vw), 1.2rem);
 }
 
-/* BASE */
+/* !BASE */
 *,
 *::before,
 *::after {
@@ -262,7 +267,7 @@ input {
   outline-color: var(--accent-color);
 }
 
-/* REUSABLE */
+/* !REUSABLE */
 article {
   border-radius: var(--fs-16);
   background-color: var(--container-color);
@@ -364,7 +369,7 @@ header {
 }
 */
 
-/* SELECT CATEGORY FILTER*/
+/* !SELECT CATEGORY FILTER*/
 .filter-list {
   display: none;
 }
