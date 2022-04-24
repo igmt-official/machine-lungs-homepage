@@ -230,7 +230,8 @@ img,
 i,
 a,
 button,
-span {
+span,
+input {
   display: block;
 }
 
@@ -248,7 +249,7 @@ button {
 }
 
 input {
-  width: 100%;
+  max-width: 100%;
 }
 
 ::selection {
