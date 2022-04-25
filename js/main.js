@@ -118,9 +118,9 @@ themeButton.addEventListener("click", () => {
 });
 
 // ADMIN SIDE
-const addProduct = document.querySelectorAll(".add-product");
+const addProduct = document.querySelector(".add-product");
 const modalContainer = document.querySelector(".modal-container");
-const modalCloseBtn = document.querySelector(".modal-btn");
+const modalCloseBtn = document.querySelector(".modal-close-btn");
 const overlay = document.querySelector(".overlay");
 
 // modal toggle function
