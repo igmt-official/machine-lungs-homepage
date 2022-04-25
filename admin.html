@@ -64,10 +64,34 @@
     <section class="admin">
       <div class="admin-container">
         <h1 class="admin-title">MACHINE LUNGS</h1>
+        <!-- !ADD PRODUCT -->
         <button class="add-product">
           <i class="ri-add-circle-line"></i>
           <span>Add New Product</span>
         </button>
+
+        <!-- !ADD PRODUCT MODAL -->
+        <div class="modal-container active">
+          <div class="overlay active">
+            <section class="add-product-modal">
+              <div class="add-product-header">
+                <h1 class="add-product-title">ADD NEW PRODUCT</h1>
+                <button class="modal-btn">
+                  <i class="ri-close-line"></i>
+                </button>
+              </div>
+
+              <div class="add-product-container">
+                <input
+                  type="text"
+                  class="form-input"
+                  placeholder="Input"
+                  required
+                />
+              </div>
+            </section>
+          </div>
+        </div>
 
         <div class="stock">
           <div class="stock-info">

@@ -1,10 +1,9 @@
 .admin {
   display: grid;
+  /* grid-template-columns: minmax(0, 1fr); */
+  /* grid-template-columns: 1fr; */
   background-color: var(--body-color);
-  margin-inline: min(var(--vpw-mobile), var(--vpw-desktop));
-  padding-block: min(var(--vpw-mobile), var(--p-24));
   min-height: 100vh;
-
   place-content: center;
 }
 
@@ -15,6 +14,9 @@
   max-width: min(90vw, 80rem);
   max-height: 100%;
   margin-block: var(--m-24); */
+  min-width: min(90vw, 80rem);
+  margin-block: min(var(--vpw-mobile), var(--vpw-desktop));
+  margin-inline: min(var(--vpw-mobile), var(--vpw-desktop));
   border-radius: var(--br-16-large-card-item);
   background-color: var(--container-color);
   border: 1px solid var(--border-color);
@@ -52,6 +54,94 @@
   background-color: var(--accent-hover-color);
 }
 
+/* ADD PRODUCT MODAL */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  z-index: 20;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal-container::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-container.active {
+  pointer-events: all;
+  visibility: visible;
+}
+
+.overlay {
+  display: grid;
+  place-content: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(16, 16, 16, 0.9);
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: 1;
+  transition: var(--transition-e);
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+}
+
+.add-product-modal {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-width: min(90vw, 80rem);
+  margin-block: min(var(--vpw-mobile), var(--vpw-desktop));
+  margin-inline: min(var(--vpw-mobile), var(--vpw-desktop));
+  row-gap: var(--g-16-card-item);
+  position: relative;
+  padding: var(--p-16-card);
+
+  border: 1px solid var(--border-color);
+  border-radius: var(--br-14-card);
+  background-color: var(--card-color);
+  transform: scale(1.2);
+  opacity: 0;
+  transition: var(--transition-e);
+  z-index: 2;
+}
+
+.modal-container.active,
+.add-product-modal {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.add-product-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-product-title {
+  font-size: var(--fs-16);
+  margin-block-end: 0;
+}
+
+.add-product-header i {
+  font-size: var(--fs-24);
+}
+
+/* STOCK INFO */
 .stock {
   display: grid;
   grid-template-columns: 1fr;

@@ -25,37 +25,3 @@
   grid-template-columns: 1fr;
   row-gap: var(--g-12-card-item);
 }
-
-.form-input {
-  background-color: var(--container-color);
-  color: var(--title-color);
-  font-size: var(--fs-14);
-  padding: var(--p-8-select-box-item-block) var(--p-10-select-box-item-inline);
-  border-radius: var(--br-12-small-card-item);
-  border: 1px solid var(--border-color);
-  outline: none;
-}
-
-.form-input::placeholder {
-  font-weight: var(--fw-600);
-}
-
-.form-input:focus {
-  border-color: var(--accent-color);
-}
-
-.form-btn {
-  background-color: var(--card-color);
-  color: var(--title-color);
-  padding: var(--p-8-select-box-item-block) var(--p-10-select-box-item-inline);
-  min-width: 100%;
-  border-radius: var(--br-12-small-card-item);
-  border: 1px solid var(--border-color);
-  font-size: var(--fs-14);
-
-  transition: var(--transition-e);
-}
-
-.form-btn:hover {
-  color: var(--accent-color);
-}
