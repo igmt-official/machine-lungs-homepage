@@ -116,3 +116,24 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+// ADMIN SIDE
+const addProduct = document.querySelectorAll(".add-product");
+const modalContainer = document.querySelector(".modal-container");
+const modalCloseBtn = document.querySelector(".modal-btn");
+const overlay = document.querySelector(".overlay");
+
+// modal toggle function
+const addProductModalFunc = function () {
+  modalContainer.classList.toggle("active");
+  overlay.classList.toggle("active");
+};
+
+// add click event to all modal items
+addProduct.addEventListener("click", function () {
+  addProductModalFunc();
+});
+
+// add click event to modal close button
+modalCloseBtn.addEventListener("click", addProductModalFunc);
+overlay.addEventListener("click", addProductModalFunc);
