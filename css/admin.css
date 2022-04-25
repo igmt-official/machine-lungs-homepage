@@ -38,7 +38,7 @@ section {
 .stock-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items: center;
+  /* align-items: center; */
 }
 
 .stock-info {
@@ -65,6 +65,10 @@ section {
   overflow: hidden;
 }
 
+.stock-list:not(:last-child) {
+  border-bottom: 0.1rem solid var(--border-color);
+}
+
 .stock-list-item {
   color: var(--title-color);
   font-size: var(--fs-8-admin-p);
@@ -74,4 +78,35 @@ section {
 
 .stock-list-item:not(:last-child) {
   border-right: 0.1rem solid var(--border-color);
+}
+
+.stock-img {
+  display: flex;
+  gap: var(--g-16-card-item);
+}
+
+.stock-img img {
+  width: 30%;
+}
+
+.stock-product figcaption {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.stock-caption span {
+  color: var(--title-color);
+  font-size: var(--fs-8-admin-p);
+}
+
+.stock-price {
+  align-self: end;
+}
+
+.stock-variation {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.stock-vg-pg {
 }
