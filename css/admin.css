@@ -1,4 +1,27 @@
-section {
+.admin {
+  display: grid;
+  background-color: var(--body-color);
+  margin-inline: min(var(--vpw-mobile), var(--vpw-desktop));
+  padding-block: min(var(--vpw-mobile), var(--p-24));
+  min-height: 100vh;
+
+  place-content: center;
+}
+
+.admin-container {
+  /* background-color: var(--container-color);
+  border-radius: var(--br-14-card);
+  padding: var(--p-16-card);
+  max-width: min(90vw, 80rem);
+  max-height: 100%;
+  margin-block: var(--m-24); */
+  border-radius: var(--br-16-large-card-item);
+  background-color: var(--container-color);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-body);
+  padding: var(--p-16-card);
+  -moz-box-shadow: var(--shadow-body);
+  -webkit-box-shadow: var(--shadow-body);
   display: grid;
   grid-template-columns: 1fr;
   row-gap: var(--g-16-card);
