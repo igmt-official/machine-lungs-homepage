@@ -116,40 +116,42 @@
                   </ul>
                 </div>
 
-                <input
-                  type="text"
-                  class="form-input"
-                  placeholder="Product Name"
-                  required
-                />
-                <div class="variation-prices">
+                <form class="add-product-form" action="#">
                   <input
                     type="text"
                     class="form-input"
-                    placeholder="60ML, 6MG"
+                    placeholder="Product Name"
                     required
                   />
+                  <div class="variation-prices">
+                    <input
+                      type="text"
+                      class="form-input"
+                      placeholder="60ML, 6MG"
+                      required
+                    />
+
+                    <input
+                      type="text"
+                      class="form-input"
+                      placeholder="Price"
+                      required
+                    />
+                  </div>
 
                   <input
                     type="text"
                     class="form-input"
-                    placeholder="Price"
+                    placeholder="Stock"
                     required
                   />
-                </div>
-
-                <input
-                  type="text"
-                  class="form-input"
-                  placeholder="Stock"
-                  required
-                />
+                </form>
 
                 <div class="upload-product-photo">
                   <p>Upload Product Photo</p>
-                  <button class="upload-img">
+                  <input type="file" class="upload-img">
                     <i class="ri-add-circle-line"></i>
-                  </button>
+                  </input>
                 </div>
               </div>
             </section>
