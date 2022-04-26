@@ -36,6 +36,8 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
+
+
 // REMOVE MENU MOBILE
 // const navLink = document.querySelectorAll(".nav-link");
 
