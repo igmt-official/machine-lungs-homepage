@@ -311,22 +311,21 @@
 }
 
 .stock-img {
-  display: flex;
-  gap: var(--g-16-card-item);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--g-16-card-item);
 }
 
 .stock-img-container {
-  background-color: red;
   height: 100%;
   max-width: 100%;
-  max-height: 10rem;
+  max-height: 15rem;
   overflow: hidden;
 }
 
 .stock-img img {
-  background-color: blue;
   object-fit: scale-down;
-  max-width: 100%;
+  min-width: 100%;
   max-height: 100%;
 }
 
