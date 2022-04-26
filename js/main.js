@@ -36,8 +36,6 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-
-
 // REMOVE MENU MOBILE
 // const navLink = document.querySelectorAll(".nav-link");
 
@@ -119,23 +117,23 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
-// ADMIN SIDE
-const addNewProduct = document.querySelector(".add-product");
-const modalContainer = document.querySelector(".modal-container");
-const modalCloseBtn = document.querySelector(".modal-close-btn");
-const overlay = document.querySelector(".overlay");
+// // ADMIN SIDE
+// const addNewProduct = document.querySelector(".add-product");
+// const modalContainer = document.querySelector(".modal-container");
+// const modalCloseBtn = document.querySelector(".modal-close-btn");
+// const overlay = document.querySelector(".overlay");
 
-// modal toggle function
-const addNewProductModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
-};
+// // modal toggle function
+// const addNewProductModalFunc = function () {
+//   modalContainer.classList.toggle("active");
+//   overlay.classList.toggle("active");
+// };
 
-// add click event to all modal items
-addNewProduct.addEventListener("click", function () {
-  addNewProductModalFunc();
-});
+// // add click event to all modal items
+// addNewProduct.addEventListener("click", function () {
+//   addNewProductModalFunc();
+// });
 
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", addNewProductModalFunc);
-overlay.addEventListener("click", addNewProductModalFunc);
+// // add click event to modal close button
+// modalCloseBtn.addEventListener("click", addNewProductModalFunc);
+// overlay.addEventListener("click", addNewProductModalFunc);
