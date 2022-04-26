@@ -118,22 +118,22 @@ themeButton.addEventListener("click", () => {
 });
 
 // ADMIN SIDE
-const addProduct = document.querySelector(".add-product");
+const addNewProduct = document.querySelector(".add-product");
 const modalContainer = document.querySelector(".modal-container");
 const modalCloseBtn = document.querySelector(".modal-close-btn");
 const overlay = document.querySelector(".overlay");
 
 // modal toggle function
-const addProductModalFunc = function () {
+const addNewProductModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 };
 
 // add click event to all modal items
-addProduct.addEventListener("click", function () {
-  addProductModalFunc();
+addNewProduct.addEventListener("click", function () {
+  addNewProductModalFunc();
 });
 
 // add click event to modal close button
-modalCloseBtn.addEventListener("click", addProductModalFunc);
-overlay.addEventListener("click", addProductModalFunc);
+modalCloseBtn.addEventListener("click", addNewProductModalFunc);
+overlay.addEventListener("click", addNewProductModalFunc);
