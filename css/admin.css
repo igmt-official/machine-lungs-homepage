@@ -152,7 +152,7 @@
   row-gap: var(--g-12-card-item);
 }
 
-/* !SELECT CATEGORY category*/
+/* !SELECT CATEGORY */
 .category-list {
   display: none;
 }
@@ -225,6 +225,30 @@
   display: grid;
   grid-template-columns: 1fr;
   row-gap: var(--g-12-card-item);
+}
+
+.upload-product-photo {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--g-8-card-item);
+}
+
+.upload-product-photo > p {
+  color: var(--title-color);
+}
+
+.upload-img {
+  border: 1px solid var(--border-color);
+  padding: var(--p-64);
+}
+
+.upload-img i {
+  font-size: var(--fs-24);
+  transition: var(--transition-e);
+}
+
+.upload-img:hover i {
+  color: var(--accent-color);
 }
 
 /* STOCK INFO */
