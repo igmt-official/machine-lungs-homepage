@@ -150,19 +150,20 @@
                 <!-- CUSTOM INPUT TYPE FILE -->
                 <div class="upload-product-photo">
                   <p>Upload Product Photo</p>
-                  <input
-                    id="img-file"
-                    type="file"
-                    class="upload-img"
-                    accept="image/*"
-                    required
-                  />
-                  <div class="img-display">
-                    <img class="img-view" src="img/Chroma-Astra.png" alt="" />
-                    <label class="upload-img-custom" for="img-file">
+                  <form runat="server" class="img-display">
+                    <input
+                      onchange="loadFile(event)"
+                      id="uploadBtn"
+                      type="file"
+                      class="upload-img"
+                      accept="image/*"
+                      required
+                    />
+                    <img id="imgView" class="img-view" src="#" alt="" />
+                    <label class="upload-img-custom" for="uploadBtn">
                       <i class="ri-add-circle-line"></i>
                     </label>
-                  </div>
+                  </form>
 
                   <!-- <i class="ri-add-circle-line"></i> -->
                 </div>

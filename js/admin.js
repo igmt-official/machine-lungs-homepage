@@ -35,3 +35,12 @@ for (let i = 0; i < selectItems.length; i++) {
     filterFunc(selectedValue);
   });
 }
+
+// Upload Image Display
+var loadFile = function (event) {
+  var output = document.getElementById("imgView");
+  output.src = URL.createObjectURL(event.target.files[0]);
+  output.onload = function () {
+    URL.revokeObjectURL(output.src); // free memory
+  };
+};
