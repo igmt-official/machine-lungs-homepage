@@ -169,8 +169,8 @@ body {
   font-family: var(--ff);
   font-size: var(--fs-16);
   background-color: var(--body-color);
-  color: var(--text-color);
-  line-height: 1.5;
+  color: var(--text-color-light);
+  line-height: 1.6;
 
   transition: var(--transition-e);
 }
