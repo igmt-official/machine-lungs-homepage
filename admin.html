@@ -147,11 +147,20 @@
                   />
                 </form>
 
+                <!-- CUSTOM INPUT TYPE FILE -->
                 <div class="upload-product-photo">
                   <p>Upload Product Photo</p>
-                  <input type="file" class="upload-img">
+                  <input
+                    id="img-file"
+                    type="file"
+                    class="upload-img"
+                    accept="image/*"
+                    required
+                  />
+                  <label class="upload-img-custom" for="img-file">
                     <i class="ri-add-circle-line"></i>
-                  </input>
+                  </label>
+                  <!-- <i class="ri-add-circle-line"></i> -->
                 </div>
               </div>
             </section>

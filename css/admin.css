@@ -244,16 +244,21 @@
 }
 
 .upload-img {
+  display: none;
+}
+
+.upload-img-custom {
   border: 1px solid var(--border-color);
   padding: var(--p-64);
 }
 
-.upload-img i {
+.upload-img-custom i {
+  text-align: center;
   font-size: var(--fs-24);
   transition: var(--transition-e);
 }
 
-.upload-img:hover i {
+.upload-img-custom:hover i {
   color: var(--accent-color);
 }
 
