@@ -4,12 +4,14 @@
   margin-block-start: var(--m-24);
 
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
 
   background-color: var(--navbar-color);
 
   backdrop-filter: blur(1rem);
-  height: var(--header-height-min);
+  max-height: var(--header-height-min);
   overflow: hidden;
   transition: var(--transition-e-i-o);
 
@@ -17,7 +19,7 @@
 }
 
 .header.active {
-  height: var(--header-height-max);
+  max-height: var(--header-height-max);
 }
 
 .nav-bar {
@@ -123,42 +125,3 @@
 .header .nav .nav-list li .nav-link.active i {
   color: var(--accent-color);
 } */
-
-.sm-hidden {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-
-  /* hide devices */
-  .md-hidden {
-    display: none;
-  }
-
-  /* show hidden element in small devices */
-  .sm-hidden {
-    display: block;
-  }
-
-  .nav-bar>* {
-    width: 33.33%;
-  }
-
-  .mobile-nav i:first-child{
-    display: block;
-    margin-left: auto;
-  }
-
-  .nav-list {
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-    /* justify-content: space-between; */
-  
-   /*  opacity: 0; */
-    /* visibility: hidden; */
-   /*  pointer-events: none; */
-    transition: var(--transition-e-i-o);
-  }
-}
