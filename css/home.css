@@ -108,7 +108,6 @@
 
 .best-seller-container {
   grid-template-columns: 1fr;
-  grid-template-rows: 20rem 1fr;
   /* align-items: center; */
   row-gap: var(--g-16-card-item);
 }
@@ -141,6 +140,7 @@
 }
 
 .best-seller-img-box {
+  height: 20rem;
   /* display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 20rem 1fr;
