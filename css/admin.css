@@ -360,6 +360,7 @@
   text-align: left;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
+  /* grid-template-rows: 15rem; */
   color: var(--title-color);
   font-size: var(--fs-8-admin-p);
   /* font-weight: var(--fw-600); */
@@ -369,10 +370,13 @@
 }
 
 .stock-img {
+  background-color: red;
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: var(--g-8-card-item);
   border-right: 1px solid var(--border-color);
+  max-width: 100%;
+  max-height: 100%;
 }
 
 /* .stock-img-container {
@@ -385,8 +389,9 @@
 } */
 
 .stock-img img {
-  align-self: center;
+  /* align-self: center; */
   /* object-fit: scale-down; */
+  object-fit: scale-down;
   max-width: 100%;
   max-height: 100%;
 }
