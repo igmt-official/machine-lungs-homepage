@@ -1,7 +1,7 @@
 .header {
-  margin-inline: min(var(--vpw-mobile), var(--vpw-desktop));
+  margin-inline: var(--m-12-main);
   /* margin-block-start: min(var(--vpw-mobile), var(--m-24)); */
-  margin-block-start: var(--m-24);
+  margin-block-start: var(--m-12-main);
 
   position: fixed;
   top: 0;

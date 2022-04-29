@@ -91,6 +91,12 @@ body.dark-theme {
   --m-12-subheader: 1.2rem;
   --m-10-feature-icon: 1rem;
 
+  --m-86-main: 8.6rem;
+  /* --m-24-main: 2.4rem; */
+  --m-12-main: 1.2rem;
+
+  --m-12-modal: 1.2rem;
+
   --m-24-select-box: 2.4rem;
 
   --m-16-separator: 1.6rem;
@@ -133,10 +139,10 @@ body.dark-theme {
   --g-8-card-item: 0.8rem;
 
   /* !VIEWPORT */
-  --vph-mobile: 2.113vh;
+  /* --vph-mobile: 2.113vh;
   --vph-desktop: 10vh;
   --vpw-mobile: 5vw;
-  --vpw-desktop: 10vw;
+  --vpw-desktop: 10vw; */
 
   /* !BORDER RADIUS */
   --br-10-section: clamp(1rem, calc(0.848rem + 0.49vw), 1.4rem);
@@ -292,9 +298,9 @@ header {
 }
 
 .main {
-  margin-inline: min(var(--vpw-mobile), var(--vpw-desktop));
-  padding-block-start: var(--p-96);
-  padding-block-end: min(var(--vpw-mobile), var(--p-24));
+  margin-inline: var(--m-12-main);
+  margin-block-start: var(--m-86-main);
+  margin-block-end: var(--m-12-main);
 }
 
 .container {
