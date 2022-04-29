@@ -386,8 +386,9 @@
 
 .stock-img img {
   align-self: center;
-  object-fit: scale-down;
-  max-width: 70%;
+  /* object-fit: scale-down; */
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .stock-product figcaption {

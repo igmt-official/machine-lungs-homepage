@@ -108,7 +108,8 @@
 
 .best-seller-container {
   grid-template-columns: 1fr;
-  align-items: center;
+  grid-template-rows: 20rem 1fr;
+  /* align-items: center; */
   row-gap: var(--g-16-card-item);
 }
 
@@ -140,21 +141,23 @@
 }
 
 .best-seller-img-box {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr;
-  justify-items: center;
+  grid-template-rows: 20rem 1fr;
+  justify-items: center; */
   max-width: 100%;
   /* height: 100%; */
   /* justify-self: center; */
   /* height: 100%; */
-  /* min-width: 100%;
-  max-height: 100%; */
+  /* min-width: 100%; */
+  max-height: 100%;
   overflow: hidden;
 }
 
 .best-seller-list-item > a .best-seller-img-box img {
-  /* object-fit: scale-down; */
-  max-width: 50%;
+  object-fit: scale-down;
+  min-width: 100%;
+  max-height: 100%;
   /* width: 50%; */
   transition: var(--transition-e);
 }
