@@ -23,13 +23,13 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/new.css" />
-    <link rel="stylesheet" href="css/shop.css" />
-    <link rel="stylesheet" href="css/contact.css" />
-    <link rel="stylesheet" href="css/queries.css" />
+    <link rel="stylesheet" href="{{ asset('css/general.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/nav.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/new.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/shop.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/contact.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/queries.css') }}"/>
 
     <title>Machine Lungs - Vapeshop</title>
   </head>
@@ -509,6 +509,6 @@
     <footer class="footer"></footer>
 
     <!-- MAIN SCRIPT -->
-    <script src="js/main.js"></script>
+    <script src="{{ asset("js/main.js") }}"></script>
   </body>
 </html>
