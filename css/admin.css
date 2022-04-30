@@ -377,6 +377,10 @@
   /* min-height: 100%; */
 }
 
+.stock-list-item-btn:hover .stock-img-container > img {
+  transform: scale(1.2);
+}
+
 .stock-img {
   /* background-color: blue; */
   display: grid;
@@ -404,6 +408,7 @@
   max-width: 100%;
   /* max-width: 100%;
   min-height: 100%; */
+  transition: var(--transition-e);
 }
 
 .stock-product figcaption {
