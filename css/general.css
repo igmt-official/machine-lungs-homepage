@@ -112,6 +112,9 @@ body.dark-theme {
   --p-16-article: 1.6rem;
   --p-16-card: 1.6rem;
 
+  --p-12-card-item: 1.2rem;
+  --p-8-card-item: 0.8rem;
+
   --p-16-select-box-inline: 1.6rem;
   --p-12-select-box-block: 1.2rem;
 

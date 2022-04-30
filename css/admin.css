@@ -13,7 +13,7 @@
   max-width: min(90vw, 80rem);
   max-height: 100%;
   margin-block: var(--m-24); */
-  min-width: min(90vw, 80rem);
+  max-width: min(90vw, 80rem);
   margin-block: var(--m-12-main);
   margin-inline: var(--m-12-main);
   border-radius: var(--br-16-large-card-item);
@@ -58,8 +58,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100vw;
+  height: 100vh;
 
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -82,11 +82,9 @@
   place-content: center;
 
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   background-color: rgba(16, 16, 16, 0.9);
-  min-width: 100%;
-  min-height: 100%;
+  /* background-color: red; */
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -103,9 +101,15 @@
 .add-product-modal {
   display: grid;
   grid-template-columns: 1fr;
-  min-width: min(90vw, 80rem);
-  margin-block: var(--m-12-modal);
-  margin-inline: var(--m-12-modal);
+  width: 100vw;
+  /* height: 100vh; */
+  max-width: min(90vw, 50rem);
+  /* width: 90vw; */
+  /* max-width: 50rem; */
+  max-height: 100%;
+  /* max-height: 90vh; */
+  /* margin-block: var(--m-12-modal); */
+  /* margin-inline: var(--m-12-modal); */
   row-gap: var(--g-16-card-item);
   position: relative;
   padding: var(--p-16-card);
@@ -117,6 +121,7 @@
   opacity: 0;
   transition: var(--transition-e);
   z-index: 2;
+  overflow: auto;
 }
 
 .modal-container.active,
@@ -243,13 +248,15 @@
 }
 
 .img-display {
+  display: grid;
   max-width: 100%;
-  height: 100%;
-  max-height: 20rem;
+  /* height: 100%; */
+  max-height: 100%;
   position: relative;
   border: 1px solid var(--border-color);
   /* padding: var(--p-64); */
   border-radius: var(--br-12-small-card-item);
+  place-items: center;
 }
 
 .img-view {
@@ -257,9 +264,8 @@
   /* top: 0;
   left: 0;
   position: absolute; */
-  object-fit: scale-down;
-  min-width: 100%;
-  max-height: 100%;
+  object-fit: cover;
+  width: 50%;
   /* background-color: red; */
 }
 
@@ -267,7 +273,8 @@
   display: flex;
   content: " ";
   /* background-color: red; */
-  height: 20rem;
+  /* height: 20rem; */
+  padding-block-end: 100%;
   max-width: 100%;
   max-height: 100%;
   /* padding-block-end: 20rem; */
@@ -378,12 +385,13 @@
   border-right: 1px solid var(--border-color);
   max-width: 100%;
   max-height: 100%;
-  height: 10rem;
   overflow: hidden;
   /* justify-content: space-between; */
 }
 
 .stock-img-container {
+  display: grid;
+  place-items: center;
   max-width: 100%;
   max-height: 100%;
   /* flex: 1 0 0; */
@@ -392,9 +400,10 @@
 .stock-img-container > img {
   /* background-color: green; */
   /* align-self: center; */
-  object-fit: scale-down;
+  object-fit: cover;
   max-width: 100%;
-  min-height: 100%;
+  /* max-width: 100%;
+  min-height: 100%; */
 }
 
 .stock-product figcaption {

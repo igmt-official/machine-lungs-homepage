@@ -59,16 +59,17 @@
 }
 
 .new-img {
+  display: grid;
   /* display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 20rem;
   justify-items: center; */
   position: relative;
-  height: 20rem;
   max-height: 100%;
   max-width: 100%;
   border-radius: var(--br-12-small-card-item);
   overflow: hidden;
+  place-items: center;
 }
 
 .new-img::before {
@@ -88,9 +89,10 @@
 }
 
 .new-img img {
-  object-fit: scale-down;
-  min-width: 100%;
-  max-height: 100%;
+  object-fit: cover;
+  max-width: 50%;
+  /* min-width: 100%;
+  max-height: 100%; */
   transition: var(--transition-e);
 }
 
@@ -107,7 +109,7 @@
   background-color: rgba(30, 30, 31, 0.75);
   color: var(--accent-color);
   border-radius: var(--br-12-small-card-item);
-  padding: var(--p-16-card);
+  padding: var(--p-8-card-item) var(--p-12-card-item);
   backdrop-filter: blur(1rem);
   font-size: var(--fs-24);
   opacity: 0;
