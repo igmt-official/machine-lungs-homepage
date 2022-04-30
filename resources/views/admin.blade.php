@@ -23,9 +23,9 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="stylesheet" href="{{ asset("css/general.css") }}" />
+    <link rel="stylesheet" href="{{ asset("css/nav.css") }}" />
+    <link rel="stylesheet" href="{{ asset("css/admin.css") }}" />
 
     <title>Machine Lungs - Vapeshop</title>
   </head>
@@ -283,6 +283,6 @@
 
     <!-- !MAIN SCRIPT -->
     <!-- <script src="js/main.js"></script> -->
-    <script src="js/admin.js"></script>
+    <script src="{{ asset("js/admin.js") }}"></script>
   </body>
 </html>
