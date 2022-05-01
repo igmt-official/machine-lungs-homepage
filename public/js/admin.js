@@ -39,8 +39,31 @@ for (let i = 0; i < selectItems.length; i++) {
 // Upload Image Display
 var loadFile = function (event) {
   var output = document.getElementById("imgView");
-  output.src = URL.createObjectURL(event.target.files[0]);
+  try {
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.style.visibility = "visible";
+  } catch (err) {
+    output.style.visibility = "hidden";
+
+  }
   output.onload = function () {
     URL.revokeObjectURL(output.src); // free memory
   };
 };
+
+const addVarationBtn = document.getElementById("add-variation-button");
+
+const addVariation = function () {
+  //get parent element
+  const parent = document.getElementById("dynamic-variations")
+  
+  //create div element
+  //create input element for variation
+  //create input element for price
+  //create button element for delete variation
+}
+
+
+addVarationBtn.addEventListener("click", addVariation);
+
+

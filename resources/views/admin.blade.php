@@ -69,7 +69,7 @@
 
             <!-- !ADD PRODUCT MODAL -->
             <div class="modal-container">
-                <div class="overlay">
+                <div class="overlay active">
                     <section class="add-product-modal">
                         <div class="add-product-header">
                             <h1 class="add-product-title">ADD NEW PRODUCT</h1>
@@ -77,74 +77,85 @@
                                 <i class="ri-close-line"></i>
                             </button>
                         </div>
-
-                        <div class="add-product-container">
-                            <!-- !SELECT CATEGORY BOX -->
-                            <div class="category-select-box">
-                                <!-- !SELECT CATEGORY BOX BUTTON -->
-                                <button class="category-select" data-select>
-                                    <div class="select-value" data-select-value>
-                                        Select Category
-                                    </div>
-
-                                    <div class="select-icon">
-                                        <i class="ri-arrow-down-s-line"></i>
-                                    </div>
-                                </button>
-
-                                <!-- !SELECT CATEGORY LIST ITEM BOX -->
-                                <ul class="select-list">
-                                    <li class="select-list-item">
-                                        <button data-select-item>E-Liquids</button>
-                                    </li>
-                                    <li class="select-list-item">
-                                        <button data-select-item>Mods</button>
-                                    </li>
-                                    <li class="select-list-item">
-                                        <button data-select-item>Atomizer</button>
-                                    </li>
-                                    <li class="select-list-item">
-                                        <button data-select-item>Coil</button>
-                                    </li>
-                                    <li class="select-list-item">
-                                        <button data-select-item>Cotton</button>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <form class="add-product-form" action="#">
+                        <form class="add-product-form" action="#">
+                            <div class="add-product-container">
                                 <input type="text" class="form-input" placeholder="Product Name" required />
-                                <div class="variation-prices">
-                                    <input type="text" class="form-input" placeholder="60ML, 6MG" required />
+                                <!-- !SELECT CATEGORY BOX -->
+                                <div class="category-select-box">
+                                    <!-- !SELECT CATEGORY BOX BUTTON -->
+                                    <button type="button" class="category-select" data-select>
+                                        <div class="select-value" data-select-value>
+                                            Select Category
+                                        </div>
 
-                                    <input type="text" class="form-input" placeholder="Price" required />
+                                        <div class="select-icon">
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </div>
+                                    </button>
+
+                                    <!-- !SELECT CATEGORY LIST ITEM BOX -->
+                                    <ul class="select-list">
+                                        <li class="select-list-item">
+                                            <button type="button" data-select-item>E-Liquids</button>
+                                        </li>
+                                        <li class="select-list-item">
+                                            <button type="button" data-select-item>Mods</button>
+                                        </li>
+                                        <li class="select-list-item">
+                                            <button type="button" data-select-item>Atomizer</button>
+                                        </li>
+                                        <li class="select-list-item">
+                                            <button type="button" data-select-item>Coil</button>
+                                        </li>
+                                        <li class="select-list-item">
+                                            <button type="button" data-select-item>Cotton</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="dynamic-variations" class="variations-wrapper ">
+                                    <div class="variation-prices">
+                                        <input type="text" class="form-input" placeholder="60ML, 6MG" required />
+                                        <input type="text" class="form-input" placeholder="Price" required />
+                                        <button type="button" class="delete-variation"><i
+                                                class="ri-delete-bin-line"></i></button>
+                                    </div>
+                                </div>
+                                <button type="button" class="add-variation-button" id="add-variation-button"> Add Variation</button>
+                                {{-- <input type="text" class="form-input" placeholder="Stock" required /> --}}
+
+                                <textarea  name="desription" id="desription" class="form-input description" placeholder="Description"></textarea>
+                                <!-- !CUSTOM INPUT TYPE FILE -->
+                                <div class="upload-product-photo">
+                                    <p class="upload-title">Upload Product Photo</p>
+                                    <small class="upload-description">
+                                        Use 500pixels x 500pixels as default size to avoid image
+                                        clipping.
+                                    </small>
+
+                                    <div class="img-wrapper">
+                                        {{-- <input id="uploadBtn" type="file" class="upload-img" accept="image/*"
+                                            required />
+                                        <img id="imgView" class="img-view" src="#" alt="" />
+                                        <label class="upload-img-custom" for="uploadBtn">
+                                            <i class="ri-add-circle-line"></i>
+                                        </label> --}}
+                                        <div class="img-inner-wrapper">
+                                            <input onchange="loadFile(event)" id="uploadBtn" type="file"
+                                                class="upload-img" accept="image/*" required />
+
+                                            <label class="upload-img-custom" for="uploadBtn">
+                                                <i class="ri-add-circle-line"></i>
+                                            </label>
+                                            <img id="imgView" class="img-view" src="#" alt="" />
+                                        </div>
+                                    </div>
+                                    <!-- <i class="ri-add-circle-line"></i> -->
                                 </div>
 
-                                <input type="text" class="form-input" placeholder="Stock" required />
-                            </form>
-
-                            <!-- !CUSTOM INPUT TYPE FILE -->
-                            <div class="upload-product-photo">
-                                <p class="upload-title">Upload Product Photo</p>
-                                <p class="upload-description">
-                                    Use 500pixels x 500pixels as default size to avoid image
-                                    clipping.
-                                </p>
-                                <form runat="server" class="img-display">
-                                    <input onchange="loadFile(event)" id="uploadBtn" type="file" class="upload-img"
-                                        accept="image/*" required />
-                                    <img id="imgView" class="img-view" src="#" alt="" />
-                                    <label class="upload-img-custom" for="uploadBtn">
-                                        <i class="ri-add-circle-line"></i>
-                                    </label>
-                                </form>
-
-                                <!-- <i class="ri-add-circle-line"></i> -->
+                                <!-- !PUBLISH BUTTON -->
+                                <button class="publish-btn">Publish</button>
                             </div>
-
-                            <!-- !PUBLISH BUTTON -->
-                            <button class="publish-btn">Publish</button>
-                        </div>
+                        </form>
                     </section>
                 </div>
             </div>

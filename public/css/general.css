@@ -258,7 +258,8 @@ input {
 }
 
 button,
-input {
+input,
+textarea {
   color: var(--title-color);
   font-family: inherit;
   border: none;
@@ -346,8 +347,10 @@ header {
 }
 
 ::-webkit-scrollbar {
-  width: 0.5rem; /* FOR VERTICAL SCROLLBAR */
-  height: 0.5rem; /* FOR HORIZONTAL SCROLLBAR */
+  width: 0.5rem;
+  /* FOR VERTICAL SCROLLBAR */
+  height: 0.5rem;
+  /* FOR HORIZONTAL SCROLLBAR */
 }
 
 ::-webkit-scrollbar-track {
@@ -434,7 +437,7 @@ header {
 }
 
 /* + Sign to target outside of element (the second element), not on the inside of the element which is the child of the parent element*/
-.filter-select.active + .select-list {
+.filter-select.active+.select-list {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
