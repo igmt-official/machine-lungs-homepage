@@ -238,7 +238,7 @@
 }
 
 .variation-prices input {
-  width: 50%;
+  width: 33%;
 }
 
 .variation-prices input:first-child {
@@ -247,9 +247,14 @@
 }
 
 .variation-prices input:nth-child(2) {
+  border-radius: 0px;
+}
+
+.variation-prices input:nth-child(3) {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
+
 
 .delete-variation {
   margin-left: 15px;
@@ -276,7 +281,7 @@
   background: var(--accent-color);
 }
 
-.description{
+.description {
   min-width: 100%;
   min-height: 1rem;
 }

@@ -51,17 +51,47 @@ var loadFile = function (event) {
   };
 };
 
+
+function getVariationNumber() {
+  let variationNumber = document.getElementById("dynamic-variations").childElementCount;
+
+
+  return variationNumber + 1;
+}
+
 const addVarationBtn = document.getElementById("add-variation-button");
+
+function addDeleteVariation() {
+  const deleteButtons = document.querySelectorAll(".delete-variation");
+  for (let i = 0; i < deleteButtons.length; i++) {
+    deleteButtons[i].addEventListener("click", function () {
+      deleteButtons[i].parentElement.remove();
+    });
+  }
+}
+
 
 const addVariation = function () {
   //get parent element
   const parent = document.getElementById("dynamic-variations")
-  
+
+  const variationNumber = getVariationNumber();
   //create div element
-  //create input element for variation
-  //create input element for price
-  //create button element for delete variation
+  const variation = "<div class='variation-prices'>" +
+    "<input type='text' name='variation[]' class='form-input' placeholder='60ML, 6MG' required />" +
+    "<input type='number' name='price[]' class='form-input' placeholder='Price' required />" +
+    "<input type='number' name='stock_quantity[]' class='form-input' placeholder='QTY' required />" +
+    "<button type='button' class='delete-variation' >" +
+    "<i class='ri-delete-bin-line'></i> " +
+    "</button > " +
+    "</div > ";
+
+  parent.innerHTML += variation;
+
+  addDeleteVariation();
 }
+
+
 
 
 addVarationBtn.addEventListener("click", addVariation);

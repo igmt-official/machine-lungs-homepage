@@ -114,16 +114,19 @@
                                 </div>
                                 <div id="dynamic-variations" class="variations-wrapper ">
                                     <div class="variation-prices">
-                                        <input type="text" class="form-input" placeholder="60ML, 6MG" required />
-                                        <input type="text" class="form-input" placeholder="Price" required />
-                                        <button type="button" class="delete-variation"><i
-                                                class="ri-delete-bin-line"></i></button>
+                                        <input type="text" name="variation[]" class="form-input"
+                                            placeholder="60ML, 6MG" required />
+                                        <input type="text" name="price[]" class="form-input" placeholder="Price"
+                                            required />
+                                        <input type="text" name="stock_quantity[]" class="form-input"
+                                            placeholder="QTY" required />
                                     </div>
                                 </div>
-                                <button type="button" class="add-variation-button" id="add-variation-button"> Add Variation</button>
+                                <button type="button" class="add-variation-button" id="add-variation-button"> Add
+                                    Variation</button>
                                 {{-- <input type="text" class="form-input" placeholder="Stock" required /> --}}
 
-                                <textarea  name="desription" id="desription" class="form-input description" placeholder="Description"></textarea>
+                                <textarea name="desription" id="desription" class="form-input description" placeholder="Description"></textarea>
                                 <!-- !CUSTOM INPUT TYPE FILE -->
                                 <div class="upload-product-photo">
                                     <p class="upload-title">Upload Product Photo</p>
