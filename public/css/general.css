@@ -242,7 +242,7 @@ a {
 
 img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 1;
     /* height: 100%; */
     /* max-width: 100%; */
     /* max-height: auto; */

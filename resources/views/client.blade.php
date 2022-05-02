@@ -176,7 +176,7 @@
                 <!-- TESTIMONIALS LIST -->
                 <ul class="testimonial-list has-scrollbar">
                     <li class="testimonial-list-item">
-                        <div class="container testimonial-container grid">
+                        <div class="container testimonial-container">
                             <p class="testimonial-description">
                                 Friendly and capable staff. Very patient in answering
                                 inquiries regarding products and vape maintenance.
@@ -186,7 +186,7 @@
                     </li>
 
                     <li class="testimonial-list-item">
-                        <div class="container testimonial-container grid">
+                        <div class="container testimonial-container">
                             <p class="testimonial-description">
                                 Would recommend this vape shop to anyone who’s new to vaping.
                             </p>
@@ -195,7 +195,7 @@
                     </li>
 
                     <li class="testimonial-list-item">
-                        <div class="container testimonial-container grid">
+                        <div class="container testimonial-container">
                             <p class="testimonial-description">
                                 I just bought liquid and batteries from them and the
                                 transaction was flawless. Definitely the best vape shop for
