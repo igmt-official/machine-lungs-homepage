@@ -135,7 +135,7 @@
         column-gap: var(--g-24-card-item);
     }
     .new-img img {
-        max-width: 50%;
+        max-width: 70%;
     }
 
     /* !SHOP SECTION */
