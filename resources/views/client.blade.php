@@ -107,9 +107,6 @@
                                     <div class="best-seller-description grid">
                                         <span class="section-p">ML: 60</span>
                                         <span class="section-p">MG: 6</span>
-
-                                        <span class="section-p">VG: 70</span>
-                                        <span class="section-p">PG: 30</span>
                                     </div>
                                 </div>
                             </div>
@@ -133,9 +130,6 @@
                                     <div class="best-seller-description grid">
                                         <span class="section-p">ML: 60</span>
                                         <span class="section-p">MG: 6</span>
-
-                                        <span class="section-p">VG: 70</span>
-                                        <span class="section-p">PG: 30</span>
                                     </div>
                                 </div>
                             </div>
@@ -159,9 +153,6 @@
                                     <div class="best-seller-description grid">
                                         <span class="section-p">ML: 60</span>
                                         <span class="section-p">MG: 6</span>
-
-                                        <span class="section-p">VG: 70</span>
-                                        <span class="section-p">PG: 30</span>
                                     </div>
                                 </div>
                             </div>
