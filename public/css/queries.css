@@ -48,7 +48,7 @@
     .header {
         /* position: relative; */
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1.5fr 1fr 1fr;
         align-items: center;
         margin-block-start: var(--m-56-main);
         margin-inline: var(--m-56-main);
@@ -133,6 +133,7 @@
     }
 
     .filter-list-item button {
+        font-size: 1.6rem;
         color: var(--title-color);
         transition: var(--transition-e);
     }
@@ -157,6 +158,13 @@
     /* !CONTACT SECTION */
     .map {
         height: 45rem;
+    }
+}
+
+/* !EXTRA 884px */
+@media (min-width: 834px) {
+    .header {
+        grid-template-columns: 1fr 1.5fr 1fr;
     }
 }
 
@@ -263,10 +271,6 @@
 
     .products-list {
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    .filter-list-item > button {
-        font-size: 1.6rem;
     }
 
     .products-item-icon {
