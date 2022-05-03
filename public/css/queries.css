@@ -450,7 +450,7 @@
     }
 
     .testimonial-list-item {
-        min-width: 30%;
+        min-width: 50%;
         /* flex: 1 0 0; */
     }
 }
