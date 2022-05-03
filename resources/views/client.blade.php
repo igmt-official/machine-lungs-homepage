@@ -420,12 +420,20 @@
                 </div>
             </section>
         </article>
+
+        <!-- !SEARCH BUTTON -->
+        <div class="search-container">
+            <input class="search-input" type="text" placeholder="Product Name">
+            <a href="#" class="search-btn">
+                <i class="ri-search-line"></i>
+            </a>
+        </div>
     </main>
 
-    <!-- FOOTER -->
+    <!-- !FOOTER -->
     <footer class="footer"></footer>
 
-    <!-- MAIN SCRIPT -->
+    <!-- !MAIN SCRIPT -->
     <script src="{{ asset('js/main.js') }}"></script>
 </body>
 

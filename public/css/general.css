@@ -306,6 +306,7 @@ header {
 }
 
 .main {
+    /* position: relative; */
     margin-inline: var(--m-12-main);
     margin-block-start: var(--m-86-main);
     margin-block-end: var(--m-12-main);
