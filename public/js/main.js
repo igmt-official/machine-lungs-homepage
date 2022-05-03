@@ -2,7 +2,7 @@
 
 // SHOW MENU
 const elementToggleFunc = function (elem) {
-  elem.classList.toggle("active");
+    elem.classList.toggle("active");
 };
 
 const navMenu = document.querySelector("[data-nav]");
@@ -10,8 +10,8 @@ const navMenuBtn = document.querySelector("[data-nav-btn]");
 const navMenuBtnIcon = "ri-arrow-up-s-line";
 
 navMenuBtn.addEventListener("click", function () {
-  elementToggleFunc(navMenu);
-  navMenuBtn.classList.toggle(navMenuBtnIcon);
+    elementToggleFunc(navMenu);
+    navMenuBtn.classList.toggle(navMenuBtnIcon);
 });
 
 // PAGE NAVIGATION
@@ -20,20 +20,20 @@ const pages = document.querySelectorAll("[data-page]");
 
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
-    elementToggleFunc(navMenu);
-    navMenuBtn.classList.toggle(navMenuBtnIcon);
-  });
+    navigationLinks[i].addEventListener("click", function () {
+        for (let i = 0; i < pages.length; i++) {
+            if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+                pages[i].classList.add("active");
+                navigationLinks[i].classList.add("active");
+                window.scrollTo(0, 0);
+            } else {
+                pages[i].classList.remove("active");
+                navigationLinks[i].classList.remove("active");
+            }
+        }
+        elementToggleFunc(navMenu);
+        navMenuBtn.classList.toggle(navMenuBtnIcon);
+    });
 }
 
 // REMOVE MENU MOBILE
@@ -53,33 +53,48 @@ const selectValue = document.querySelector("[data-select-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
 select.addEventListener("click", function () {
-  elementToggleFunc(this);
+    elementToggleFunc(this);
 });
 
 // add event in all select items
 for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
-  });
+    selectItems[i].addEventListener("click", function () {
+        let selectedValue = this.innerText.toLowerCase();
+        selectValue.innerText = this.innerText;
+        elementToggleFunc(select);
+        filterFunc(selectedValue);
+    });
 }
 
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
-  for (let i = 0; i < filterItems.length; i++) {
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
+    for (let i = 0; i < filterItems.length; i++) {
+        if (selectedValue === "all") {
+            filterItems[i].classList.add("active");
+        } else if (selectedValue === filterItems[i].dataset.category) {
+            filterItems[i].classList.add("active");
+        } else {
+            filterItems[i].classList.remove("active");
+        }
     }
-  }
 };
+
+// add event in all filter button items for large screen
+let lastClickedBtn = filterBtn[0];
+
+for (let i = 0; i < filterBtn.length; i++) {
+    filterBtn[i].addEventListener("click", function () {
+        let selectedValue = this.innerText.toLowerCase();
+        selectValue.innerText = this.innerText;
+        filterFunc(selectedValue);
+
+        lastClickedBtn.classList.remove("active");
+        this.classList.add("active");
+        lastClickedBtn = this;
+    });
+}
 
 // DARK LIGHT THEME
 const themeButton = document.getElementById("theme-btn");
@@ -92,29 +107,29 @@ const selectedIcon = localStorage.getItem("selected-icon");
 
 // We obtain the current theme that the interface has by validating the dark-theme class
 const getCurrentTheme = () =>
-  document.body.classList.contains(darkTheme) ? "dark" : "light";
+    document.body.classList.contains(darkTheme) ? "dark" : "light";
 const getCurrentIcon = () =>
-  themeButton.classList.contains(iconTheme) ? "ri-moon-line" : "ri-sun-line";
+    themeButton.classList.contains(iconTheme) ? "ri-moon-line" : "ri-sun-line";
 
 // We validate if the user previously chose a topic
 if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-    darkTheme
-  );
-  themeButton.classList[selectedIcon === "ri-moon-line" ? "add" : "remove"](
-    iconTheme
-  );
+    // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+    document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+        darkTheme
+    );
+    themeButton.classList[selectedIcon === "ri-moon-line" ? "add" : "remove"](
+        iconTheme
+    );
 }
 
 // Activate / deactivate the theme manually with the button
 themeButton.addEventListener("click", () => {
-  // Add or remove the dark / icon theme
-  document.body.classList.toggle(darkTheme);
-  themeButton.classList.toggle(iconTheme);
-  // We save the theme and the current icon that the user chose
-  localStorage.setItem("selected-theme", getCurrentTheme());
-  localStorage.setItem("selected-icon", getCurrentIcon());
+    // Add or remove the dark / icon theme
+    document.body.classList.toggle(darkTheme);
+    themeButton.classList.toggle(iconTheme);
+    // We save the theme and the current icon that the user chose
+    localStorage.setItem("selected-theme", getCurrentTheme());
+    localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
 // // ADMIN SIDE
