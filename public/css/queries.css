@@ -1,7 +1,8 @@
 /* !SMALL SCREEN 576px */
 @media (min-width: 576px) {
     :root {
-        --m-86-main: 9.6rem;
+        --m-86-main: 12rem;
+        --m-12-main: 3.2rem;
     }
 
     ::-webkit-scrollbar-button {
@@ -57,7 +58,7 @@
     }
 
     ::-webkit-scrollbar-button {
-        width: 12rem;
+        /* width: 12rem; */
     }
 
     /* !HEADER */
@@ -110,7 +111,7 @@
     }
 
     .hero-img {
-        width: 50%;
+        width: 70%;
     }
 
     /* !BEST SELLER SECTION */
@@ -124,7 +125,7 @@
 
     /* !TESTIMONIALS SECTION */
     .testimonial-list-item {
-        min-width: 70%;
+        min-width: 80%;
     }
 
     /* !NEW SECTION */
@@ -197,6 +198,11 @@
     .hero-img {
         width: 70%;
     }
+
+    /* !TESTIMONIALS SECTION */
+    .testimonial-list-item {
+        min-width: 70%;
+    }
 }
 
 /* !LARGE 992px */
@@ -207,7 +213,7 @@
     }
 
     ::-webkit-scrollbar-button {
-        width: 16rem;
+        /* width: 16rem; */
     }
 
     .header {
@@ -276,7 +282,7 @@
     }
 
     .testimonial-list-item {
-        min-width: 70%;
+        min-width: 60%;
     }
 
     .new-img img {
@@ -297,6 +303,7 @@
 @media (min-width: 1200px) {
     :root {
         --m-86-main: 20.8rem;
+        --m-192-main: 19.2rem;
         --m-56-main: 9.6rem;
 
         --m-12-subheader: 2rem;
@@ -329,7 +336,7 @@
     }
 
     ::-webkit-scrollbar-button {
-        width: 20rem;
+        /* width: 20rem; */
     }
 
     header {
@@ -337,7 +344,12 @@
     }
 
     .header {
-        grid-template-columns: 1fr 2.5fr 1fr;
+        margin-inline: var(--m-192-main);
+        grid-template-columns: 1fr 1.5fr 1fr;
+    }
+
+    .main {
+        margin-inline: var(--m-192-main);
     }
 
     .nav-list {
@@ -350,14 +362,14 @@
     }
 
     .hero-title {
-        font-size: 4.8rem;
+        font-size: 4rem;
     }
 
     .hero-tagline {
-        font-size: 3.2rem;
+        font-size: 2.4rem;
     }
     .hero-subtitle {
-        font-size: 2.4rem;
+        font-size: 1.6rem;
     }
 
     .hero-img {
@@ -410,7 +422,7 @@
     }
 
     .testimonial-list-item {
-        min-width: 60%;
+        min-width: 70%;
         /* flex: 1 0 0; */
     }
 
@@ -446,7 +458,7 @@
 /* !EXTRA LARGE 1400px */
 @media (min-width: 1400px) {
     .header {
-        grid-template-columns: 1fr 3.5fr 1fr;
+        grid-template-columns: 1fr 2.5fr 1fr;
     }
 
     .testimonial-list-item {

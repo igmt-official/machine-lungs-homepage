@@ -16,7 +16,7 @@
     <link rel="manifest" href="manifest.webmanifest" />
 
     <!-- ICON -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/general.css') }}" />
