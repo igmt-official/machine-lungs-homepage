@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="{{ asset('css/general.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/nav.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/queries.css') }}" />
 
     <title>Machine Lungs - Vapeshop</title>
 </head>

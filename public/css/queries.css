@@ -3,6 +3,18 @@
     ::-webkit-scrollbar-button {
         width: 10rem;
     }
+
+    /* !ADMIN PANEL */
+    .admin-container {
+        margin-block: 5.4rem;
+        max-width: 40rem;
+    }
+
+    .add-product-modal {
+        margin-block: 5.4rem;
+        max-width: 40rem;
+        /* margin-inline: auto; */
+    }
 }
 
 /* !MEDIUM SCREEN 768px */
@@ -158,6 +170,17 @@
     /* !CONTACT SECTION */
     .map {
         height: 45rem;
+    }
+
+    /* !ADMIN PANEL */
+    .admin-container {
+        margin-block: 5.4rem;
+        max-width: 60rem;
+    }
+
+    .add-product-modal {
+        margin-block: 5.4rem;
+        max-width: 60rem;
     }
 }
 
