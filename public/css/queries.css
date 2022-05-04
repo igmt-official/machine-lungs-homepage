@@ -369,8 +369,11 @@
         display: flex;
     }
 
-    .search-container-desktop:hover .search-input {
+    /* .search-container-desktop:hover .search-input {
         width: 20rem;
+    } */
+    .search-container-desktop:hover .search-input {
+        width: 20vw;
     }
 }
 
@@ -501,9 +504,9 @@
     }
 
     /* !SEARCH BAR */
-    .search-container-desktop:hover .search-input {
+    /* .search-container-desktop:hover .search-input {
         width: 22rem;
-    }
+    } */
 }
 
 /* !EXTRA LARGE 1400px */
@@ -526,9 +529,7 @@
     }
 
     /* !SEARCH BAR */
-    .search-container-desktop:hover .search-input {
+    /* .search-container-desktop:hover .search-input {
         width: 30rem;
-    }
+    } */
 }
-
-/* !EXTRA 1600px */
