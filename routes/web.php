@@ -29,3 +29,5 @@ Route::get('/admin', function () {
 Route::get('/login', function () {
     return view('auth');
 });
+
+
