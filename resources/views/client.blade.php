@@ -56,6 +56,14 @@
                 <li><button class="nav-link" data-nav-link>Contact</button></li>
             </ul>
         </nav>
+
+        <!-- !SEARCH BUTTON -->
+        <div class="search-container-desktop">
+            <input class="search-input" type="text" placeholder="Product Name">
+            <a href="#" class="search-btn-desktop">
+                <i class="ri-search-line"></i>
+            </a>
+        </div>
     </header>
 
     <!-- MAIN -->
@@ -490,6 +498,14 @@
                 <li><button class="nav-link" data-nav-link>Contact</button></li>
             </ul>
         </nav>
+
+        <!-- !SEARCH BAR -->
+        <div class="search-container-desktop">
+            <input class="search-input" type="text" placeholder="Product Name">
+            <a href="#" class="search-btn-desktop">
+                <i class="ri-search-line"></i>
+            </a>
+        </div>
     </header>
 
     <!-- MAIN -->

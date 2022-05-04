@@ -71,17 +71,19 @@
 
     /* !HEADER */
     .header {
-        /* position: relative; */
-        display: grid;
+        /* position: relative;
         grid-template-columns: 1.5fr 1fr 1fr;
-        align-items: center;
+        align-items: center; */
         margin-block-start: var(--m-56-main);
         margin-inline: var(--m-12-main);
         max-height: 100%;
     }
 
-    .nav-bar > figure {
-        grid-area: logo;
+    .nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 22rem;
     }
 
     .mobile-nav {
@@ -204,17 +206,12 @@
     }
 
     .search-container:hover .search-input {
-        width: 40rem;
+        width: 30rem;
     }
 }
 
 /* !EXTRA 884px */
 @media (min-width: 800px) {
-    /* !HEADER SECTION */
-    .header {
-        grid-template-columns: 1fr 1.5fr 1fr;
-    }
-
     /* !HERO SECTION */
     .hero-img {
         width: 70%;
@@ -281,10 +278,6 @@
 
     ::-webkit-scrollbar-button {
         /* width: 16rem; */
-    }
-
-    .header {
-        grid-template-columns: 1fr 2fr 1fr;
     }
 
     .nav-bar i {
@@ -369,12 +362,15 @@
 
     /* !SEARCH BAR */
     .search-container {
-        bottom: 6.4rem;
-        right: 6.4rem;
+        display: none;
     }
 
-    .search-container:hover .search-input {
-        width: 60rem;
+    .search-container-desktop {
+        display: flex;
+    }
+
+    .search-container-desktop:hover .search-input {
+        width: 20rem;
     }
 }
 
@@ -396,7 +392,6 @@
 
     .header {
         margin-inline: var(--m-184-main);
-        grid-template-columns: 1fr 2fr 1fr;
     }
 
     .main {
@@ -506,9 +501,8 @@
     }
 
     /* !SEARCH BAR */
-    .search-container {
-        bottom: 9.6rem;
-        right: 13.6rem;
+    .search-container-desktop:hover .search-input {
+        width: 22rem;
     }
 }
 
@@ -520,7 +514,6 @@
 
     .header {
         margin-inline: var(--m-184-main);
-        grid-template-columns: 1fr 2.5fr 1fr;
     }
 
     .main {
@@ -533,8 +526,9 @@
     }
 
     /* !SEARCH BAR */
-    .search-container {
-        bottom: 9.6rem;
-        right: 19.2rem;
+    .search-container-desktop:hover .search-input {
+        width: 30rem;
     }
 }
+
+/* !EXTRA 1600px */

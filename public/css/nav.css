@@ -125,3 +125,52 @@
 .header .nav .nav-list li .nav-link.active i {
   color: var(--accent-color);
 } */
+
+/* !SEARCH BAR */
+.search-container-desktop {
+    display: none;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 8rem;
+    transform: translateY(-50%);
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--container-color);
+    padding: 0.9rem 1.3rem;
+    transition: var(--transition-e);
+}
+
+.search-container-desktop:hover .search-input {
+    width: 20rem;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    color: var(--body-color);
+    /* background-color: red; */
+}
+
+.search-container-desktop:hover {
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
+}
+
+.search-container-desktop:hover .search-btn-desktop > i {
+    color: var(--body-color);
+}
+
+.search-input {
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background: none;
+    transition: var(--transition-e-i-o);
+}
+
+.search-btn-desktop > i {
+    font-size: var(--fs-icon);
+    color: var(--accent-color);
+    /* background-color: var(--card-color); */
+    /* padding: 0.4rem; */
+}
