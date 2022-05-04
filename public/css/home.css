@@ -230,11 +230,17 @@
     opacity: 1;
     visibility: visible;
     pointer-events: all;
+    color: var(--body-color);
     /* background-color: red; */
 }
 
 .search-container:hover {
     border-color: var(--accent-color);
+    background-color: var(--accent-color);
+}
+
+.search-container:hover .search-btn > i {
+    color: var(--body-color);
 }
 
 .search-input {
