@@ -1,3 +1,5 @@
+
+
 //function for toggling class
 const elementToggleFunc = function (elem) {
   elem.classList.toggle("active"); //remove class if found on the passed element
@@ -97,3 +99,7 @@ const addVariation = function () {
 addVarationBtn.addEventListener("click", addVariation);
 
 
+$(document).ready(function () {
+  var btn = $("#dynamic-variations");
+  console.log(btn);
+});

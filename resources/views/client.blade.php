@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="{{ asset('css/shop.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/queries.css') }}" />
+
+  
     {{-- SCRIPTS --}}
 @endsection
 
