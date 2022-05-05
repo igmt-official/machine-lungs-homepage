@@ -53,7 +53,6 @@
                                         <span>MG: 6</span>
                                     </div>
                                 </div>
-
                                 <div class="available">AVAILABLE</div>
                             </button>
                         </li>

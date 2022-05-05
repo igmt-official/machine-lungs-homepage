@@ -1,3 +1,10 @@
+@php
+use App\Http\Controllers\HelperController;
+$hc = new HelperController();
+
+$categories = $hc->fetchCategories();
+@endphp
+
 <!-- !ADD PRODUCT -->
 <button id="showAddProductModal" class="add-product">
     <i class="ri-add-circle-line"></i>
@@ -14,10 +21,16 @@
                     <i class="ri-close-line"></i>
                 </button>
             </div>
-            <form class="add-product-form" action="#">
+
+            <form id="AddProductForm" class="add-product-form" method="POST" enctype="multipart/form-data">
+                @csrf
                 <div class="add-product-container">
-                    <input type="text" class="form-input" placeholder="Product Name" required />
+
+                    <input type="text" name="product_name" class="form-input" placeholder="Product Name" required />
+                    <input type="hidden" name="category_id" class="form-input category_id" placeholder="Product Name"
+                        required />
                     <!-- !SELECT CATEGORY BOX -->
+
                     <div class="category-select-box">
                         <!-- !SELECT CATEGORY BOX BUTTON -->
                         <button type="button" class="category-select" data-select>
@@ -32,7 +45,17 @@
 
                         <!-- !SELECT CATEGORY LIST ITEM BOX -->
                         <ul class="select-list">
-                            <li class="select-list-item">
+                            @if (count($categories) > 0)
+                                @foreach ($categories as $category)
+                                    <li class="select-list-item">
+                                        <button class="category-button" type="button" value="{{ $category->id }}"
+                                            data-select-item>{{ $category->category_name }}</button>
+                                    </li>
+                                @endforeach
+
+                            @endif
+
+                            {{-- <li class="select-list-item">
                                 <button type="button" data-select-item>E-Liquids</button>
                             </li>
                             <li class="select-list-item">
@@ -46,7 +69,7 @@
                             </li>
                             <li class="select-list-item">
                                 <button type="button" data-select-item>Cotton</button>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                     <div id="dynamic-variations" class="variations-wrapper ">
@@ -62,7 +85,7 @@
                         Variation</button>
                     {{-- <input type="text" class="form-input" placeholder="Stock" required /> --}}
 
-                    <textarea name="desription" id="desription" class="form-input description" placeholder="Description"></textarea>
+                    <textarea name="description" id="description" class="form-input description" placeholder="Description"></textarea>
                     <!-- !CUSTOM INPUT TYPE FILE -->
                     <div class="upload-product-photo">
                         <p class="upload-title">Upload Product Photo</p>
@@ -79,8 +102,8 @@
                                 <i class="ri-add-circle-line"></i>
                             </label> --}}
                             <div class="img-inner-wrapper">
-                                <input onchange="loadFile(event)" id="uploadBtn" type="file" class="upload-img"
-                                    accept="image/*" required />
+                                <input name="product_img" onchange="loadFile(event)" id="uploadBtn" type="file"
+                                    class="upload-img" accept="image/*" required>
 
                                 <label class="upload-img-custom" for="uploadBtn">
                                     <i class="ri-add-circle-line"></i>
@@ -92,7 +115,8 @@
                     </div>
 
                     <!-- !PUBLISH BUTTON -->
-                    <button class="publish-btn">Publish</button>
+                    <button id="btn-publish" class="publish-btn">Publish</button>
+                    <button id="btn-delist" class="publish-btn">Save and Delist</button>
                 </div>
             </form>
         </section>

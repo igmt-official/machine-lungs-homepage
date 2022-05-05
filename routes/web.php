@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ProductsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,4 +30,4 @@ Route::get('/login', function () {
     return view('auth');
 });
 
-
+Route::post('/product/create',  [ProductsController::class, "create"]);

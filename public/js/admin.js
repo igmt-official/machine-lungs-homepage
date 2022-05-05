@@ -22,7 +22,7 @@ modal_close_btn.addEventListener("click", () => {
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-select-value]");
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
+//const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
 select.addEventListener("click", function () {
   elementToggleFunc(this);
@@ -31,10 +31,10 @@ select.addEventListener("click", function () {
 // add event in all select items
 for (let i = 0; i < selectItems.length; i++) {
   selectItems[i].addEventListener("click", function () {
-    let selectedValue = this.innerText.toLowerCase();
+    //let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
     elementToggleFunc(select);
-    filterFunc(selectedValue);
+    //filterFunc(selectedValue);
   });
 }
 
@@ -99,7 +99,3 @@ const addVariation = function () {
 addVarationBtn.addEventListener("click", addVariation);
 
 
-$(document).ready(function () {
-  var btn = $("#dynamic-variations");
-  console.log(btn);
-});
