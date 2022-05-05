@@ -54,30 +54,8 @@ var loadFile = function (event) {
 };
 
 
-function getVariationNumber() {
-  let variationNumber = document.getElementById("dynamic-variations").childElementCount;
-
-
-  return variationNumber + 1;
-}
-
-const addVarationBtn = document.getElementById("add-variation-button");
-
-function addDeleteVariation() {
-  const deleteButtons = document.querySelectorAll(".delete-variation");
-  for (let i = 0; i < deleteButtons.length; i++) {
-    deleteButtons[i].addEventListener("click", function () {
-      deleteButtons[i].parentElement.remove();
-    });
-  }
-}
-
-
-const addVariation = function () {
-  //get parent element
-  const parent = document.getElementById("dynamic-variations")
-
-  const variationNumber = getVariationNumber();
+/* add variation function */
+function dynamicVariations() {
   //create div element
   const variation = "<div class='variation-prices'>" +
     "<input type='text' name='variation[]' class='form-input' placeholder='60ML, 6MG' required />" +
@@ -88,14 +66,21 @@ const addVariation = function () {
     "</button > " +
     "</div > ";
 
-  parent.innerHTML += variation;
+  /* add variation buttin click listener */
+  $("#add-variation-button").click(function (e) {
+    e.preventDefault();
+    //append to parent
+    $("#dynamic-variations").append(variation);
+  });
+  /* delete variation click listener */
+  $(document).on("click", ".delete-variation", function () {
+    $(this).parent().remove();  //remove the parent of the button whose clicked
+  });
 
-  addDeleteVariation();
 }
 
-
-
-
-addVarationBtn.addEventListener("click", addVariation);
-
-
+/* load after the page finished loading */
+$(document).ready(function () {
+  //call dynamic variation function
+  dynamicVariations();
+});

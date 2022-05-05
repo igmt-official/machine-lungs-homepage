@@ -9,6 +9,6 @@ class ProductsController extends Controller
     //
     public function create(Request $request)
     {
-        echo json_encode(Request::post());
+        echo json_encode($request->input("variation"));
     }
 }
