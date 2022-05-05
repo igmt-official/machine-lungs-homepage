@@ -14,6 +14,7 @@
 
 {{-- HTML BODY STARTS HERE --}}
 @section('body')
+    <h1>BEST SELLER</h1>
     {{-- serves as the body of the html document --}}
     <!-- here you start coding html -->
 
