@@ -30,4 +30,8 @@ Route::get('/login', function () {
     return view('auth');
 });
 
+Route::get('/admin/bestseller', function () {
+    return view('bestseller');
+});
+
 Route::post('/product/create',  [ProductsController::class, "create"]);
