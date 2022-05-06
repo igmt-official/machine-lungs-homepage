@@ -10,14 +10,14 @@ $(document).ready(function () {
     });
 
 
-    $("#AddProductForm").submit(function (e) {
+    /* $("#AddProductForm").submit(function (e) {
         e.preventDefault();
         var formData = new FormData(this);
         $.ajax({
             type: "POST",
             url: "/product/create",
             data: formData,
-            dataType: "JSON",
+            dataType: "TEXT",
             success: function (response) {
                 console.log(response);
             }, error: (xhr, status, error) => {
@@ -28,5 +28,5 @@ $(document).ready(function () {
             contentType: false,
             processData: false,
         });
-    });
+    }); */
 });

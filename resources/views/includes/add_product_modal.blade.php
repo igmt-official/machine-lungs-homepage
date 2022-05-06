@@ -22,7 +22,8 @@ $categories = $hc->fetchCategories();
                 </button>
             </div>
 
-            <form id="AddProductForm" class="add-product-form" method="POST" enctype="multipart/form-data">
+            <form id="AddProductForm" class="add-product-form" method="POST" action="/product/create"
+                enctype="multipart/form-data">
                 @csrf
                 <div class="add-product-container">
 
@@ -115,7 +116,7 @@ $categories = $hc->fetchCategories();
                     </div>
 
                     <!-- !PUBLISH BUTTON -->
-                    <button id="btn-publish" class="publish-btn">Publish</button>
+                    <button type="submit" id="btn-publish" class="publish-btn">Publish</button>
                     <button id="btn-delist" class="publish-btn">Save and Delist</button>
                 </div>
             </form>
