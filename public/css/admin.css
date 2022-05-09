@@ -214,7 +214,7 @@
 }
 
 /* + Sign to target outside of element (the second element), not on the inside of the element which is the child of the parent element*/
-.category-select.active + .select-list {
+.category-select.active+.select-list {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
@@ -236,6 +236,11 @@
 
 .variation-prices {
     display: flex;
+}
+
+
+
+.form-input-wrapper {
     margin-bottom: var(--g-12-card-item);
 }
 
@@ -266,13 +271,23 @@
     color: #d00;
 }
 
+.var-btn-wrapper {
+    display: flex;
+}
+
+.var-btn-wrapper>* {
+    width: 50%;
+}
+
 .add-variation-button {
     border: 1px solid var(--accent-color);
     color: var(--accent-color);
-    padding: 12px;
-    border-radius: 15px;
+    padding: .5rem 3rem;
+    border-radius: 9px;
     transition: ease 0.35s;
     font-weight: 700;
+    width: fit-content;
+    margin-left: auto;
 }
 
 .add-variation-button:hover {
@@ -452,7 +467,7 @@
     /* min-height: 100%; */
 }
 
-.stock-list-item-btn:hover .stock-img-container > img {
+.stock-list-item-btn:hover .stock-img-container>img {
     transform: scale(1.2);
 }
 
@@ -476,7 +491,7 @@
     /* flex: 1 0 0; */
 }
 
-.stock-img-container > img {
+.stock-img-container>img {
     /* background-color: green; */
     /* align-self: center; */
     object-fit: cover;

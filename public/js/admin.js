@@ -1,5 +1,6 @@
 
 
+
 //function for toggling class
 const elementToggleFunc = function (elem) {
   elem.classList.toggle("active"); //remove class if found on the passed element
@@ -37,8 +38,6 @@ for (let i = 0; i < selectItems.length; i++) {
     //filterFunc(selectedValue);
   });
 }
-
-// Upload Image Display
 var loadFile = function (event) {
   var output = document.getElementById("imgView");
   try {
@@ -53,18 +52,27 @@ var loadFile = function (event) {
   };
 };
 
+const uploadBtn = document.getElementById("uploadBtn");
+uploadBtn.addEventListener("change", loadFile)
+
+// Upload Image Display
+
+
 
 /* add variation function */
 function dynamicVariations() {
   //create div element
-  const variation = "<div class='variation-prices'>" +
-    "<input type='text' name='variation[]' class='form-input' placeholder='60ML, 6MG' required />" +
-    "<input type='number' name='price[]' class='form-input' placeholder='Price' required />" +
-    "<input type='number' name='stock_quantity[]' class='form-input' placeholder='QTY' required />" +
+  const variation = "<div class='form-input-wrapper'>" +
+    "<div class='variation-prices'>" +
+    "<input type='text' name='variation[]' class='form-input variation' placeholder='60ML, 6MG' required />" +
+    "<input type='number' name='price[]' class='form-input price-error' placeholder='Price' required />" +
+    "<input type='number' name='stock_quantity[]' class='form-input stock-quantity' placeholder='QTY' required />" +
     "<button type='button' class='delete-variation' >" +
     "<i class='ri-delete-bin-line'></i> " +
     "</button > " +
-    "</div > ";
+    "</div > " +
+    "<small class='invalid-message'>Field required</small>" +
+    "</div > ";;
 
   /* add variation buttin click listener */
   $("#add-variation-button").click(function (e) {
@@ -81,6 +89,15 @@ function dynamicVariations() {
 
 /* load after the page finished loading */
 $(document).ready(function () {
+
+
+  /*   Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Something went wrong!',
+      footer: '<a href="">Why do I have this issue?</a>'
+    }) */
   //call dynamic variation function
   dynamicVariations();
+
 });

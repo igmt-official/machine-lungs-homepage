@@ -3,6 +3,18 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
+.swal2-popup {
+    font-size: 1.6rem !important;
+}
+
+.border-danger {
+    border-color: rgb(143, 17, 17) !important;
+}
+
+.form-group {
+    width: 100%;
+}
+
 /* !DARK THEME */
 body.dark-theme {
     /* !COLOR */
@@ -272,7 +284,17 @@ button {
 }
 
 input {
+    width: 100%;
     max-width: 100%;
+}
+
+.invalid-message {
+    color: #d00;
+    display: none;
+}
+
+.invalid-message.active {
+    display: block;
 }
 
 ::selection {
@@ -438,7 +460,7 @@ header {
 }
 
 /* + Sign to target outside of element (the second element), not on the inside of the element which is the child of the parent element*/
-.filter-select.active + .select-list {
+.filter-select.active+.select-list {
     opacity: 1;
     visibility: visible;
     pointer-events: all;

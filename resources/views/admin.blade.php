@@ -120,6 +120,7 @@
 
     <!-- !MAIN SCRIPT -->
     <!-- <script src="js/main.js"></script> -->
-    <script src="{{ asset('js/admin.js') }}"></script>
+ 
+    <script type="module" src="{{ asset('js/admin.js') }}"></script>
     <script src="{{ asset('js/products.js') }}"></script>
 @endsection
