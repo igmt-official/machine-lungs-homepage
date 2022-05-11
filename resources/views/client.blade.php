@@ -1,0 +1,882 @@
+@extends('layouts.app')
+
+{{-- TITLE OF THE PAGE --}}
+@section('title', 'Machine Lungs - Vapeshop')
+
+{{-- HTML HEAD STARTS HERE --}}
+@section('head')
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ asset('css/general.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/nav.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/new.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/shop.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/contact.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/queries.css') }}" />
+
+
+    {{-- SCRIPTS --}}
+@endsection
+
+
+
+{{-- HTML BODY STARTS HERE --}}
+@section('body')
+    <!-- HEADER -->
+    <header class="header section" data-nav>
+        <div class="nav-bar">
+            <!-- LOGO -->
+            <figure><span class="logo">MACHINE LUNGS</span></figure>
+            <!-- MOBILE NAV ICON -->
+            <div class="mobile-nav">
+                <i id="theme-btn" class="ri-moon-line"></i>
+                <i class="ri-arrow-down-s-line" data-nav-btn></i>
+            </div>
+        </div>
+
+        <!-- SEPARATOR -->
+        <div class="separator"></div>
+
+        <!-- NAV LINK LIST -->
+        <nav class="nav">
+            <ul class="nav-list">
+                <li>
+                    <button class="nav-link active" data-nav-link>Home</button>
+                </li>
+
+                <li>
+                    <button class="nav-link" data-nav-link>New</button>
+                </li>
+
+                <li>
+                    <button class="nav-link" data-nav-link>Shop</button>
+                </li>
+
+                <li><button class="nav-link" data-nav-link>Contact</button></li>
+            </ul>
+        </nav>
+
+        <!-- !SEARCH BUTTON -->
+        <div class="search-container-desktop">
+            <input class="search-input" type="text" placeholder="Product Name">
+            <a href="#" class="search-btn-desktop">
+                <i class="ri-search-line"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+        <!-- HOME -->
+        <article class="home active" data-page="home">
+            <!-- HERO -->
+            <section class="hero">
+                <div class="hero-container grid">
+                    <div class="hero-description-container">
+                        <h1 class="hero-title">MACHINE LUNGS</h1>
+                        <h2 class="hero-tagline">Company Tagline</h2>
+                        <p class="hero-subtitle">Your Company Subtitle</p>
+                    </div>
+
+                    <div class="hero-img-container">
+                        <img class="hero-img" src="img/hero-img.png" alt="Machine Lungs Mockup" loading="lazy" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- BEST SELLER -->
+            <section class="best-seller">
+                <h2 class="h2">BEST SELLERS</h2>
+                <!-- BEST SELLER LIST -->
+                <ul class="best-seller-list has-scrollbar">
+                    <li class="best-seller-list-item">
+                        <a href="#" class="container">
+                            <div class="best-seller-container grid">
+                                <div class="best-seller-img-box">
+                                    <img src="img/Chroma-Astra.png" alt="Chrome Astra E-Liquid" loading="lazy" />
+                                </div>
+
+                                <div class="best-seller-text-box">
+                                    <span class="tags">E-LIQUIDS</span>
+                                    <div class="best-seller-title">
+                                        <span class="best-seller-name">CHROMA ASTRA</span>
+                                        <span class="price">₱ 200</span>
+                                    </div>
+
+                                    <div class="best-seller-description grid">
+                                        <span class="section-p">ML: 60</span>
+                                        <span class="section-p">MG: 6</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="best-seller-list-item">
+                        <a href="#" class="container">
+                            <div class="best-seller-container grid">
+                                <div class="best-seller-img-box">
+                                    <img src="img/Magic-Cereal.png" alt="Magic Cereal E-Liquid" />
+                                </div>
+
+                                <div class="best-seller-text-box">
+                                    <span class="tags">E-LIQUIDS</span>
+                                    <div class="best-seller-title">
+                                        <span class="best-seller-name">MAGIC CEREAL</span>
+                                        <span class="price">₱ 200</span>
+                                    </div>
+
+                                    <div class="best-seller-description grid">
+                                        <span class="section-p">ML: 60</span>
+                                        <span class="section-p">MG: 6</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="best-seller-list-item">
+                        <a href="#" class="container">
+                            <div class="best-seller-container grid">
+                                <div class="best-seller-img-box">
+                                    <img src="img/Chroma-Astra.png" alt="Chrome Astra E-Liquid" />
+                                </div>
+
+                                <div class="best-seller-text-box">
+                                    <span class="tags">E-LIQUIDS</span>
+                                    <div class="best-seller-title">
+                                        <span class="best-seller-name">CHROMA ASTRA</span>
+                                        <span class="price">₱ 200</span>
+                                    </div>
+
+                                    <div class="best-seller-description grid">
+                                        <span class="section-p">ML: 60</span>
+                                        <span class="section-p">MG: 6</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- TESTIMONIALS -->
+            <section class="testimonials">
+                <h2 class="h2">TESTIMONIALS</h2>
+                <!-- TESTIMONIALS LIST -->
+                <ul class="testimonial-list has-scrollbar">
+                    <li class="testimonial-list-item">
+                        <div class="container testimonial-container">
+                            <p class="testimonial-description">
+                                Friendly and capable staff. Very patient in answering
+                                inquiries regarding products and vape maintenance.
+                            </p>
+                            <span class="testimonial-name">&mdash; Ivan Gregor Tabalno</span>
+                        </div>
+                    </li>
+
+                    <li class="testimonial-list-item">
+                        <div class="container testimonial-container">
+                            <p class="testimonial-description">
+                                Would recommend this vape shop to anyone who’s new to vaping.
+                            </p>
+                            <span class="testimonial-name">&mdash; Dex Claud Nocum</span>
+                        </div>
+                    </li>
+
+                    <li class="testimonial-list-item">
+                        <div class="container testimonial-container">
+                            <p class="testimonial-description">
+                                I just bought liquid and batteries from them and the
+                                transaction was flawless. Definitely the best vape shop for
+                                me. 5/5 customer service.
+                            </p>
+                            <span class="testimonial-name">&mdash; Richard Mark Manlapig</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- NEW ARRIVAL -->
+        <article class="new" data-page="new">
+            <section class="new-arrival">
+                <h2 class="new-arrival-title">NEW ARRIVAL</h2>
+
+                <!-- PRODUCT LIST ITEM -->
+                <ul class="new-list">
+                    <li class="new-list-item active" data-filter-item data-category="e-liquids">
+                        <a href="#">
+                            <figure class="new-img">
+                                <div class="new-item-icon">
+                                    <i class="ri-eye-line"></i>
+                                </div>
+
+                                <img src="img/Chroma-Astra.png" alt="Product Image" loading="lazy" />
+                            </figure>
+
+                            <div class="new-description">
+                                <span class="new-title">Chroma Astra</span>
+                                <span class="new-category">E-Liquids</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="new-list-item active" data-filter-item data-category="e-liquids">
+                        <a href="#">
+                            <figure class="new-img">
+                                <div class="new-item-icon">
+                                    <i class="ri-eye-line"></i>
+                                </div>
+
+                                <img src="img/Magic-Cereal.png" alt="Product Image" loading="lazy" />
+                            </figure>
+
+                            <div class="new-description">
+                                <span class="new-title">Chroma Astra</span>
+                                <span class="new-category">E-Liquids</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="new-list-item active" data-filter-item data-category="e-liquids">
+                        <a href="#">
+                            <figure class="new-img">
+                                <div class="new-item-icon">
+                                    <i class="ri-eye-line"></i>
+                                </div>
+
+                                <img src="img/Chroma-Astra.png" alt="Product Image" loading="lazy" />
+                            </figure>
+
+                            <div class="new-description">
+                                <span class="new-title">Chroma Astra</span>
+                                <span class="new-category">E-Liquids</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- SHOP -->
+        <article class="shop" data-page="shop">
+            <section class="products">
+                <!-- FILTER BUTTON FOR LARGE SCREEN -->
+                <ul class="filter-list">
+                    <li class="filter-list-item">
+                        <button class="active" data-filter-btn>All</button>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <button data-filter-btn>E-Liquids</button>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <button data-filter-btn>Mods</button>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <button data-filter-btn>Atomizer</button>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <button data-filter-btn>Coil</button>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <button data-filter-btn>Cotton</button>
+                    </li>
+                </ul>
+
+                <!-- SELECT FILTER BOX FOR SMALL SCREEN -->
+                <div class="filter-select-box">
+                    <!-- SELECT FILTER BOX BUTTON -->
+                    <button class="filter-select" data-select>
+                        <div class="select-value" data-select-value>Select Category</div>
+
+                        <div class="select-icon">
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                    </button>
+
+                    <!-- SELECT FILTER LIST ITEM BOX -->
+                    <ul class="select-list">
+                        <li class="select-list-item">
+                            <button data-select-item>All</button>
+                        </li>
+                        <li class="select-list-item">
+                            <button data-select-item>E-Liquids</button>
+                        </li>
+                        <li class="select-list-item">
+                            <button data-select-item>Mods</button>
+                        </li>
+                        <li class="select-list-item">
+                            <button data-select-item>Atomizer</button>
+                        </li>
+                        <li class="select-list-item">
+                            <button data-select-item>Coil</button>
+                        </li>
+                        <li class="select-list-item">
+                            <button data-select-item>Cotton</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- PRODUCT LIST ITEM -->
+                <ul class="products-list">
+                    <li class="products-list-item active" data-filter-item data-category="e-liquids">
+                        <a href="#">
+                            <figure class="products-img">
+                                <div class="products-item-icon">
+                                    <i class="ri-eye-line"></i>
+                                </div>
+
+                                <img src="img/Chroma-Astra.png" alt="Product Image" loading="lazy" />
+                            </figure>
+
+                            <div class="products-description">
+                                <span class="products-title">Chroma Astra</span>
+                                <span class="products-category">E-Liquids</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="products-list-item active" data-filter-item data-category="e-liquids">
+                        <a href="#">
+                            <figure class="products-img">
+                                <div class="products-item-icon">
+                                    <i class="ri-eye-line"></i>
+                                </div>
+
+                                <img src="img/Magic-Cereal.png" alt="Product Image" loading="lazy" />
+                            </figure>
+
+                            <div class="products-description">
+                                <span class="products-title">Chroma Astra</span>
+                                <span class="products-category">E-Liquids</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="products-list-item active" data-filter-item data-category="e-liquids">
+                        <a href="#">
+                            <figure class="products-img">
+                                <div class="products-item-icon">
+                                    <i class="ri-eye-line"></i>
+                                </div>
+
+                                <img src="img/Chroma-Astra.png" alt="Product Image" loading="lazy" />
+                            </figure>
+
+                            <div class="products-description">
+                                <span class="products-title">Chroma Astra</span>
+                                <span class="products-category">E-Liquids</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- CONTACT -->
+        <article class="contact" data-page="contact">
+            <section class="contact-section">
+                <h2 class="h2">CONTACT</h2>
+                <div class="contact-box">
+                    <!-- MAP -->
+                    <div class="map">
+                        <figure>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d239.96801610797195!2d120.66647713077114!3d15.778188329224912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339131b62aa7151f%3A0x85aa479db88d6942!2sLBC%20Express%20-%20Cuyapo!5e0!3m2!1sen!2sph!4v1650635086149!5m2!1sen!2sph"
+                                width="800" height="600" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </figure>
+                    </div>
+
+                    <!-- SOCIAL MEDIA -->
+                    <div class="social">
+                        <ul class="social-list">
+                            <li class="social-list-item">
+                                <a href="#">
+                                    <i class="ri-facebook-circle-line"></i>FACEBOOK
+                                </a>
+                            </li>
+                            <li class="social-list-item">
+                                <a href="#">
+                                    <i class="ri-instagram-line"></i>
+                                    INSTAGRAM
+                                </a>
+                            </li>
+                            <li class="social-list-item">
+                                <a href="#">
+                                    <i class="ri-global-line"></i>
+                                    MACHINE LUNGS
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <!-- !SEARCH BUTTON -->
+        <div class="search-container">
+            <input class="search-input" type="text" placeholder="Product Name">
+            <a href="#" class="search-btn">
+                <i class="ri-search-line"></i>
+            </a>
+        </div>
+    </main>
+
+    <!-- !FOOTER -->
+    <footer class="footer"></footer>
+
+    <!-- !MAIN SCRIPT -->
+    <script src="{{ asset('js/main.js') }}"></script>
+
+@endsection
+
+
+{{-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- DESCRIPTION -->
+    <meta name="description"
+        content="Machine Lungs - Vapeshop, we sell only premium juice, high nic / salt nic / Flavory / Mentol / etc..." />
+
+    <!-- FAVICON -->
+    <link rel="icon" href="#" />
+    <link rel="apple-touch-icon" href="#" />
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <!-- ICON -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
+
+    <title>Machine Lungs - Vapeshop</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header section" data-nav>
+        <div class="nav-bar">
+            <!-- LOGO -->
+            <figure><span class="logo">MACHINE LUNGS</span></figure>
+            <!-- MOBILE NAV ICON -->
+            <div class="mobile-nav">
+                <i id="theme-btn" class="ri-moon-line"></i>
+                <i class="ri-arrow-down-s-line" data-nav-btn></i>
+            </div>
+        </div>
+
+        <!-- SEPARATOR -->
+        <div class="separator"></div>
+
+        <!-- NAV LINK LIST -->
+        <nav class="nav">
+            <ul class="nav-list">
+                <li>
+                    <button class="nav-link active" data-nav-link>Home</button>
+                </li>
+
+                <li>
+                    <button class="nav-link" data-nav-link>New</button>
+                </li>
+
+                <li>
+                    <button class="nav-link" data-nav-link>Shop</button>
+                </li>
+
+                <li><button class="nav-link" data-nav-link>Contact</button></li>
+            </ul>
+        </nav>
+
+        <!-- !SEARCH BAR -->
+        <div class="search-container-desktop">
+            <input class="search-input" type="text" placeholder="Product Name">
+            <a href="#" class="search-btn-desktop">
+                <i class="ri-search-line"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+        <!-- HOME -->
+        <article class="home active" data-page="home">
+            <!-- HERO -->
+            <section class="hero">
+                <div class="hero-container grid">
+                    <div class="hero-description-container">
+                        <h1 class="hero-title">MACHINE LUNGS</h1>
+                        <h2 class="hero-tagline">Company Tagline</h2>
+                        <p class="hero-subtitle">Your Company Subtitle</p>
+                    </div>
+
+                    <div class="hero-img-container">
+                        <img class="hero-img" src="img/hero-img.png" alt="Machine Lungs Mockup" loading="lazy" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- BEST SELLER -->
+            <section class="best-seller">
+                <h2 class="h2">BEST SELLERS</h2>
+                <!-- BEST SELLER LIST -->
+                <ul class="best-seller-list has-scrollbar">
+                    <li class="best-seller-list-item">
+                        <a href="#" class="container">
+                            <div class="best-seller-container grid">
+                                <div class="best-seller-img-box">
+                                    <img src="img/Chroma-Astra.png" alt="Chrome Astra E-Liquid" loading="lazy" />
+                                </div>
+
+                                <div class="best-seller-text-box">
+                                    <span class="tags">E-LIQUIDS</span>
+                                    <div class="best-seller-title">
+                                        <span class="best-seller-name">CHROMA ASTRA</span>
+                                        <span class="price">₱ 200</span>
+                                    </div>
+
+                                    <div class="best-seller-description grid">
+                                        <span class="section-p">ML: 60</span>
+                                        <span class="section-p">MG: 6</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="best-seller-list-item">
+                        <a href="#" class="container">
+                            <div class="best-seller-container grid">
+                                <div class="best-seller-img-box">
+                                    <img src="img/Magic-Cereal.png" alt="Magic Cereal E-Liquid" />
+                                </div>
+
+                                <div class="best-seller-text-box">
+                                    <span class="tags">E-LIQUIDS</span>
+                                    <div class="best-seller-title">
+                                        <span class="best-seller-name">MAGIC CEREAL</span>
+                                        <span class="price">₱ 200</span>
+                                    </div>
+
+                                    <div class="best-seller-description grid">
+                                        <span class="section-p">ML: 60</span>
+                                        <span class="section-p">MG: 6</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="best-seller-list-item">
+                        <a href="#" class="container">
+                            <div class="best-seller-container grid">
+                                <div class="best-seller-img-box">
+                                    <img src="img/Chroma-Astra.png" alt="Chrome Astra E-Liquid" />
+                                </div>
+
+                                <div class="best-seller-text-box">
+                                    <span class="tags">E-LIQUIDS</span>
+                                    <div class="best-seller-title">
+                                        <span class="best-seller-name">CHROMA ASTRA</span>
+                                        <span class="price">₱ 200</span>
+                                    </div>
+
+                                    <div class="best-seller-description grid">
+                                        <span class="section-p">ML: 60</span>
+                                        <span class="section-p">MG: 6</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- TESTIMONIALS -->
+            <section class="testimonials">
+                <h2 class="h2">TESTIMONIALS</h2>
+                <!-- TESTIMONIALS LIST -->
+                <ul class="testimonial-list has-scrollbar">
+                    <li class="testimonial-list-item">
+                        <div class="container testimonial-container">
+                            <p class="testimonial-description">
+                                Friendly and capable staff. Very patient in answering
+                                inquiries regarding products and vape maintenance.
+                            </p>
+                            <span class="testimonial-name">&mdash; Ivan Gregor Tabalno</span>
+                        </div>
+                    </li>
+
+                    <li class="testimonial-list-item">
+                        <div class="container testimonial-container">
+                            <p class="testimonial-description">
+                                Would recommend this vape shop to anyone who’s new to vaping.
+                            </p>
+                            <span class="testimonial-name">&mdash; Dex Claud Nocum</span>
+                        </div>
+                    </li>
+
+                    <li class="testimonial-list-item">
+                        <div class="container testimonial-container">
+                            <p class="testimonial-description">
+                                I just bought liquid and batteries from them and the
+                                transaction was flawless. Definitely the best vape shop for
+                                me. 5/5 customer service.
+                            </p>
+                            <span class="testimonial-name">&mdash; Richard Mark Manlapig</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- NEW ARRIVAL -->
+        <article class="new" data-page="new">
+            <section class="new-arrival">
+                <h2 class="new-arrival-title">NEW ARRIVAL</h2>
+
+                <!-- PRODUCT LIST ITEM -->
+                <ul class="new-list">
+                    <li class="new-list-item active" data-filter-item data-category="e-liquids">
+                        <a href="#">
+                            <figure class="new-img">
+                                <div class="new-item-icon">
+                                    <i class="ri-eye-line"></i>
+                                </div>
+
+                                <img src="img/Chroma-Astra.png" alt="Product Image" loading="lazy" />
+                            </figure>
+
+                            <div class="new-description">
+                                <span class="new-title">Chroma Astra</span>
+                                <span class="new-category">E-Liquids</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="new-list-item active" data-filter-item data-category="e-liquids">
+                        <a href="#">
+                            <figure class="new-img">
+                                <div class="new-item-icon">
+                                    <i class="ri-eye-line"></i>
+                                </div>
+
+                                <img src="img/Magic-Cereal.png" alt="Product Image" loading="lazy" />
+                            </figure>
+
+                            <div class="new-description">
+                                <span class="new-title">Chroma Astra</span>
+                                <span class="new-category">E-Liquids</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="new-list-item active" data-filter-item data-category="e-liquids">
+                        <a href="#">
+                            <figure class="new-img">
+                                <div class="new-item-icon">
+                                    <i class="ri-eye-line"></i>
+                                </div>
+
+                                <img src="img/Chroma-Astra.png" alt="Product Image" loading="lazy" />
+                            </figure>
+
+                            <div class="new-description">
+                                <span class="new-title">Chroma Astra</span>
+                                <span class="new-category">E-Liquids</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- SHOP -->
+        <article class="shop" data-page="shop">
+            <section class="products">
+                <!-- FILTER BUTTON FOR LARGE SCREEN -->
+                <ul class="filter-list">
+                    <li class="filter-list-item">
+                        <button class="active" data-filter-btn>All</button>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <button data-filter-btn>E-Liquids</button>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <button data-filter-btn>Mods</button>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <button data-filter-btn>Atomizer</button>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <button data-filter-btn>Coil</button>
+                    </li>
+
+                    <li class="filter-list-item">
+                        <button data-filter-btn>Cotton</button>
+                    </li>
+                </ul>
+
+                <!-- SELECT FILTER BOX FOR SMALL SCREEN -->
+                <div class="filter-select-box">
+                    <!-- SELECT FILTER BOX BUTTON -->
+                    <button class="filter-select" data-select>
+                        <div class="select-value" data-select-value>Select Category</div>
+
+                        <div class="select-icon">
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                    </button>
+
+                    <!-- SELECT FILTER LIST ITEM BOX -->
+                    <ul class="select-list">
+                        <li class="select-list-item">
+                            <button data-select-item>All</button>
+                        </li>
+                        <li class="select-list-item">
+                            <button data-select-item>E-Liquids</button>
+                        </li>
+                        <li class="select-list-item">
+                            <button data-select-item>Mods</button>
+                        </li>
+                        <li class="select-list-item">
+                            <button data-select-item>Atomizer</button>
+                        </li>
+                        <li class="select-list-item">
+                            <button data-select-item>Coil</button>
+                        </li>
+                        <li class="select-list-item">
+                            <button data-select-item>Cotton</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- PRODUCT LIST ITEM -->
+                <ul class="products-list">
+                    <li class="products-list-item active" data-filter-item data-category="e-liquids">
+                        <a href="#">
+                            <figure class="products-img">
+                                <div class="products-item-icon">
+                                    <i class="ri-eye-line"></i>
+                                </div>
+
+                                <img src="img/Chroma-Astra.png" alt="Product Image" loading="lazy" />
+                            </figure>
+
+                            <div class="products-description">
+                                <span class="products-title">Chroma Astra</span>
+                                <span class="products-category">E-Liquids</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="products-list-item active" data-filter-item data-category="e-liquids">
+                        <a href="#">
+                            <figure class="products-img">
+                                <div class="products-item-icon">
+                                    <i class="ri-eye-line"></i>
+                                </div>
+
+                                <img src="img/Magic-Cereal.png" alt="Product Image" loading="lazy" />
+                            </figure>
+
+                            <div class="products-description">
+                                <span class="products-title">Chroma Astra</span>
+                                <span class="products-category">E-Liquids</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="products-list-item active" data-filter-item data-category="e-liquids">
+                        <a href="#">
+                            <figure class="products-img">
+                                <div class="products-item-icon">
+                                    <i class="ri-eye-line"></i>
+                                </div>
+
+                                <img src="img/Chroma-Astra.png" alt="Product Image" loading="lazy" />
+                            </figure>
+
+                            <div class="products-description">
+                                <span class="products-title">Chroma Astra</span>
+                                <span class="products-category">E-Liquids</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- CONTACT -->
+        <article class="contact" data-page="contact">
+            <section class="contact-section">
+                <h2 class="h2">CONTACT</h2>
+                <div class="contact-box">
+                    <!-- MAP -->
+                    <div class="map">
+                        <figure>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d239.96801610797195!2d120.66647713077114!3d15.778188329224912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339131b62aa7151f%3A0x85aa479db88d6942!2sLBC%20Express%20-%20Cuyapo!5e0!3m2!1sen!2sph!4v1650635086149!5m2!1sen!2sph"
+                                width="800" height="600" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </figure>
+                    </div>
+
+                    <!-- SOCIAL MEDIA -->
+                    <div class="social">
+                        <ul class="social-list">
+                            <li class="social-list-item">
+                                <a href="#">
+                                    <i class="ri-facebook-circle-line"></i>FACEBOOK
+                                </a>
+                            </li>
+                            <li class="social-list-item">
+                                <a href="#">
+                                    <i class="ri-instagram-line"></i>
+                                    INSTAGRAM
+                                </a>
+                            </li>
+                            <li class="social-list-item">
+                                <a href="#">
+                                    <i class="ri-global-line"></i>
+                                    MACHINE LUNGS
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <!-- !SEARCH BUTTON -->
+        <div class="search-container">
+            <input class="search-input" type="text" placeholder="Product Name">
+            <a href="#" class="search-btn">
+                <i class="ri-search-line"></i>
+            </a>
+        </div>
+    </main>
+
+    <!-- !FOOTER -->
+    <footer class="footer"></footer>
+
+    <!-- !MAIN SCRIPT -->
+    <script src="{{ asset('js/main.js') }}"></script>
+</body>
+
+</html> --}}
