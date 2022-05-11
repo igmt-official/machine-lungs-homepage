@@ -42,8 +42,9 @@ $products = $productsController->getAllProducts();
                                     <button class="stock-list-item-btn">
                                         <figure class="stock-img">
                                             <div class="stock-img-container">
-                                                 
-                                                <img src="{{ asset("product_images/{$item->product_image}") }}" alt="Product Image" />
+
+                                                <img src="{{ asset("product_images/{$item->product_image}") }}"
+                                                    alt="Product Image" />
                                             </div>
                                             <figcaption>
                                                 <div class="stock-caption">
@@ -78,7 +79,13 @@ $products = $productsController->getAllProducts();
 
                                         </div>
 
-                                        <div class="available">AVAILABLE</div>
+                                        <div class="available">
+                                            @if ($item->status)
+                                                AVAILABLE
+                                            @else
+                                                <span style="color:#d00">DELISTED</span>
+                                            @endif
+                                        </div>
 
                                     </button>
 
