@@ -512,10 +512,13 @@
 }
 
 .stock-variation {
+  
     padding-inline: var(--p-10-select-box-item-inline);
     height: 100%;
     border-right: 1px solid var(--border-color);
 }
+
+
 
 .available {
     padding-inline: var(--p-10-select-box-item-inline);

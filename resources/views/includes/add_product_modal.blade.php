@@ -1,9 +1,7 @@
 @php
 use App\Http\Controllers\HelperController;
 $hc = new HelperController();
-
 $categories = $hc->fetchCategories();
-
 @endphp
 
 <!-- !ADD PRODUCT -->

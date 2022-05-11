@@ -1,3 +1,9 @@
+@php
+use App\Http\Controllers\ProductsController;
+$productsController = new ProductsController();
+$products = $productsController->getAllProducts();
+
+@endphp
 @extends('layouts.app')
 
 @section('title', 'Machine Lungs - Vapeshop')
@@ -19,99 +25,131 @@
             @include('includes.add_product_modal')
             <!-- !STOCK TABLE HEADER -->
             <div class="stock">
-                <div class="stock-info">
+                {{-- <div class="stock-info">
                     <ul class="stock-info-list">
                         <li class="stock-info-item">PRODUCT</li>
                         <li class="stock-info-item">VARIATION</li>
                         <li class="stock-info-item">AVAILABLE</li>
                     </ul>
-                </div>
+                </div> --}}
 
                 <!-- !STOCK TABLE LIST -->
                 <div class="stock-product">
                     <ul class="stock-list">
-                        <li class="stock-list-item">
+                        @if (count($products) > 0)
+                            @foreach ($products as $item)
+                                <li class="stock-list-item">
+                                    <button class="stock-list-item-btn">
+                                        <figure class="stock-img">
+                                            <div class="stock-img-container">
+                                                 
+                                                <img src="{{ asset("product_images/{$item->product_image}") }}" alt="Product Image" />
+                                            </div>
+                                            <figcaption>
+                                                <div class="stock-caption">
+                                                    <span>{{ $item->product_name }}</span>
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+
+                                        <div class="stock-variation">
+                                            @php
+                                                $variations = $productsController->getProductVariations($item->id);
+                                            @endphp
+
+
+                                            @if (count($variations) > 0)
+                                                @foreach ($variations as $variation)
+                                                    <div class="single-variation">
+                                                        <span>Var.: {{ $variation->variation }}</span>
+                                                    </div>
+                                                    <div class="single-stock">
+                                                        Stock: {{ $variation->stock_quantity }}
+                                                    </div>
+                                                    <div class="single-price">
+                                                        <span>Price: {{ $variation->price }}</span>
+                                                    </div>
+                                                @endforeach
+                                            @else
+                                                <div>
+                                                    Variation not found
+                                                </div>
+                                            @endif
+
+                                        </div>
+
+                                        <div class="available">AVAILABLE</div>
+
+                                    </button>
+
+                                </li>
+                            @endforeach
+                        @endif
+
+
+                        {{-- <li class="stock-list-item">
                             <button class="stock-list-item-btn">
                                 <figure class="stock-img">
                                     <div class="stock-img-container">
-                                        <img src="img/Chroma-Astra.png" alt="Product Image" />
+                                        <img src="img/Magic-Cereal.png" alt="Product Image" />
                                     </div>
-
                                     <figcaption>
                                         <div class="stock-caption">
-                                            <span>Chroma Asta</span>
-                                            <span>₱ 200</span>
-                                        </div>
+                                            <span>Magic Cereal</span>
 
-                                        <span class="stock-quantity">Stock: 0</span>
+                                        </div>
                                     </figcaption>
                                 </figure>
 
                                 <div class="stock-variation">
-                                    <div class="stock-ml-mg">
+                                    <div class="single-variation">
                                         <span>ML: 60</span>
-                                        <span>MG: 6</span>
+                                    </div>
+                                    <div class="single-stock">
+                                        Stock: 15
+                                    </div>
+                                    <div class="single-price">
+                                        <span>Price: ₱ 60</span>
                                     </div>
                                 </div>
-                                <div class="available">AVAILABLE</div>
-                            </button>
-                        </li>
 
+                                <div class="available">AVAILABLE</div>
+
+                            </button>
+
+                        </li>
                         <li class="stock-list-item">
                             <button class="stock-list-item-btn">
                                 <figure class="stock-img">
                                     <div class="stock-img-container">
                                         <img src="img/Magic-Cereal.png" alt="Product Image" />
                                     </div>
-
                                     <figcaption>
                                         <div class="stock-caption">
                                             <span>Magic Cereal</span>
-                                            <span>₱ 200</span>
-                                        </div>
 
-                                        <span class="stock-quantity">Stock: 0</span>
+                                        </div>
                                     </figcaption>
                                 </figure>
 
                                 <div class="stock-variation">
-                                    <div class="stock-ml-mg">
+                                    <div class="single-variation">
                                         <span>ML: 60</span>
-                                        <span>MG: 6</span>
+                                    </div>
+                                    <div class="single-stock">
+                                        Stock: 15
+                                    </div>
+                                    <div class="single-price">
+                                        <span>Price: ₱ 60</span>
                                     </div>
                                 </div>
 
                                 <div class="available">AVAILABLE</div>
+
                             </button>
-                        </li>
 
-                        <li class="stock-list-item">
-                            <button class="stock-list-item-btn">
-                                <figure class="stock-img">
-                                    <div class="stock-img-container">
-                                        <img src="img/Chroma-Astra.png" alt="Product Image" />
-                                    </div>
+                        </li> --}}
 
-                                    <figcaption>
-                                        <div class="stock-caption">
-                                            <span>Chroma Asta</span>
-                                            <span>₱ 200</span>
-                                        </div>
-
-                                        <span class="stock-quantity">Stock: 0</span>
-                                    </figcaption>
-                                </figure>
-
-                                <div class="stock-variation">
-                                    <div class="stock-ml-mg">
-                                        <span>ML: 60</span>
-                                        <span>MG: 6</span>
-                                    </div>
-                                </div>
-
-                                <div class="available">AVAILABLE</div>
-                            </button>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -120,7 +158,7 @@
 
     <!-- !MAIN SCRIPT -->
     <!-- <script src="js/main.js"></script> -->
- 
+
     <script type="module" src="{{ asset('js/admin.js') }}"></script>
     <script src="{{ asset('js/products.js') }}"></script>
 @endsection

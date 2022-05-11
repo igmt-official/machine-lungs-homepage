@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Variation;
 use GrahamCampbell\ResultType\Success;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -10,8 +11,6 @@ use Illuminate\Support\Facades\Response;
 
 class ProductsController extends Controller
 {
-
-
     public function create(Request $request)
     {
 
@@ -94,5 +93,25 @@ class ProductsController extends Controller
         }
 
         return json_encode($message);
+    }
+
+    public function getAllProducts()
+    {
+        $products = DB::table("products")
+            ->select("products.*", "category.category_name")
+            ->join("category", "products.category_id", "=", "category.id")
+            ->get();
+        return $products;
+    }
+
+    public function getProductVariations($product_id)
+    {
+        $variations = DB::table("variations")
+            ->select("*")
+            ->where("product_id", "=", $product_id)
+            ->limit(1)
+            ->get();
+
+        return $variations;
     }
 }
